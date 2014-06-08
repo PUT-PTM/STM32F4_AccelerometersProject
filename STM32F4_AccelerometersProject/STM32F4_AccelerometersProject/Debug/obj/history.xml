@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\STM32F4_AccelerometersProject\cmsis -I..\..\..\workspace\STM32F4_AccelerometersProject\cmsis_lib -I..\..\..\workspace\STM32F4_AccelerometersProject -I..\..\..\workspace -I..\..\..\workspace\STM32F4_AccelerometersProject\cmsis_lib\include -I..\..\.. -I..\..\..\workspace\STM32F4_AccelerometersProject\cmsis_boot">
+      <target file="spi.o" lastModified="1463af927f4">
+         <source file="..\..\..\spi.c" lastModified="1458edc695a"/>
+      </target>
+      <target file="stm32f4xx_exti.o" lastModified="1463af92b1b">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="1454781908b"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="1463af92918">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="1453db62f55"/>
+      </target>
+      <target file="spi_adxl.o" lastModified="1463af92964">
+         <source file="..\..\..\spi_adxl.c" lastModified="145ad74c2e4"/>
+      </target>
+      <target file="i2c_adxl.o" lastModified="1463af927d6">
+         <source file="..\..\..\i2c_adxl.c" lastModified="145ad81df79"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="1463af92856">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="1453db5bb9a"/>
+      </target>
+      <target file="spi_lis.o" lastModified="1463af92830">
+         <source file="..\..\..\spi_lis.c" lastModified="145ad4ed151"/>
+      </target>
+      <target file="stm32f4xx_tim.o" lastModified="1463af92bf8">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="14547761de6"/>
+      </target>
+      <target file="i2c.o" lastModified="1463af92811">
+         <source file="..\..\..\..\..\..\..\Users\ksoch_000\Documents\i2c.c" lastModified="1458edc4700"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="1463af92947">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="14547782782"/>
+      </target>
+      <target file="misc.o" lastModified="1463af92b6a">
+         <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="1454781673a"/>
+      </target>
+      <target file="accelerometers.o" lastModified="146a719286c">
+         <source file="..\..\..\accelerometers.c" lastModified="146a718899c"/>
+      </target>
+      <target file="stm32f4xx_spi.o" lastModified="1463af929b0">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_spi.c" lastModified="1453db64a09"/>
+      </target>
+      <target file="stm32f4xx_rcc.o" lastModified="1463af928db">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="1453db62211"/>
+      </target>
+      <target file="stm32f4xx_i2c.o" lastModified="1463af92ae7">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_i2c.c" lastModified="1453db6445d"/>
+      </target>
+      <target file="accelerators.o" lastModified="1463b1db57e">
+         <source file="..\..\..\accelerators.c" lastModified="1463b158cc3"/>
+      </target>
+      <target file="i2c_lis.o" lastModified="1463af92b39">
+         <source file="..\..\..\i2c_lis.c" lastModified="145acf961da"/>
+      </target>
+      <target file="i2c_combined.o" lastModified="1463af92a94">
+         <source file="..\..\..\i2c_combined.c" lastModified="1463af79a74"/>
+      </target>
+      <target file="main.o" lastModified="146a71928b5">
+         <source file="..\..\..\main.c" lastModified="146a716417a"/>
+      </target>
+   </processor>
+</history>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=STM32F4_AccelerometersProject.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\STM32F4_AccelerometersProject -TC:\CooCox\CoIDE\configuration\ProgramData\STM32F4_AccelerometersProject/arm-gcc-link.ld -g">
+      <target file="STM32F4_AccelerometersProject.elf" lastModified="146a7192a75">
+         <source file="..\obj\accelerometers.o" lastModified="146a719286c"/>
+         <source file="..\obj\i2c_adxl.o" lastModified="1463af927d6"/>
+         <source file="..\obj\spi.o" lastModified="1463af927f4"/>
+         <source file="..\obj\i2c.o" lastModified="1463af92811"/>
+         <source file="..\obj\spi_lis.o" lastModified="1463af92830"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="1463af92856"/>
+         <source file="..\obj\main.o" lastModified="146a71928b5"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="1463af928db"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="1463af92918"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="1463af92947"/>
+         <source file="..\obj\spi_adxl.o" lastModified="1463af92964"/>
+         <source file="..\obj\stm32f4xx_spi.o" lastModified="1463af929b0"/>
+         <source file="..\obj\stm32f4xx_i2c.o" lastModified="1463af92ae7"/>
+         <source file="..\obj\stm32f4xx_exti.o" lastModified="1463af92b1b"/>
+         <source file="..\obj\i2c_lis.o" lastModified="1463af92b39"/>
+         <source file="..\obj\misc.o" lastModified="1463af92b6a"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="1463af92bf8"/>
+      </target>
+   </processor>
+</history>
