@@ -198,10 +198,10 @@ void I2C_stop(I2C_TypeDef* I2Cx) {
 	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
 }
 
-uint8_t i2c_read_registry(uint8_t axes) {
+uint8_t i2c_read_registry(uint8_t axis) {
 	uint8_t temp;
 	I2C_start(I2C1, I2C_SLAVE_ADDRESS, I2C_Direction_Transmitter);
-	I2C_write(I2C1, axes);
+	I2C_write(I2C1, axis);
 	I2C_stop(I2C1);
 
 	I2C_start(I2C1, I2C_SLAVE_ADDRESS, I2C_Direction_Receiver);
