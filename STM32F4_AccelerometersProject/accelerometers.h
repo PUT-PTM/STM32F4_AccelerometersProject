@@ -64,6 +64,8 @@
 #define ADXL_RANGE_4G	((uint8_t)0x01)
 #define ADXL_RANGE_8G	((uint8_t)0x02)
 #define ADXL_RANGE_16G	((uint8_t)0x03)
+#define ADXL_FULL_RES ((uint8_t)0x08)
+#define ADXL_mG_PER_DIGIT 4.3
 
 #define LIS_REGISTRY_CTRL	0x20
 #define LIS_REGISTRY_DATAX	0x29
@@ -82,6 +84,7 @@
 #define LIS_X_ENABLE	((uint8_t)0x01)
 #define LIS_Y_ENABLE	((uint8_t)0x02)
 #define LIS_Z_ENABLE	((uint8_t)0x04)
+#define LIS_mG_PER_DIGIT 17.0
 
 enum Accel { LIS, ADXL };
 enum Interface { SPI, I2C };
@@ -90,15 +93,22 @@ struct Connection {
 	int success;
 	enum Accel accel;
 	enum Interface iface;
+	double scale;
 };
 
 struct Axes {
-	u16 x, y, z;
-	int success;
+	s16 x, y, z;
+	u8 success;
+};
+
+struct AxesG {
+	double x, y, z;
+	u8 success;
 };
 
 struct Connection Accelerometer_Init(enum Accel accel, enum Interface iface);
 struct Axes Accelerometer_readAxes(struct Connection conn);
+struct AxesG Accelerometer_readAxesGforce(struct Connection conn);
 
 // I2C
 void I2C1_init(void);

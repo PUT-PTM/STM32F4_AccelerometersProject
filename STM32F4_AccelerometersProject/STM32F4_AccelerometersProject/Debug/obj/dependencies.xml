@@ -6,27 +6,7 @@
       <source file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h" lastModified="1453db6445b">
          <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
-      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="1453db58c8d">
-      </source>
-      <source file="..\..\..\cmsis\core_cm4.h" lastModified="1453db58c88">
-         <include file="..\..\..\cmsis\core_cmInstr.h"/>
-         <include file="..\..\..\cmsis\core_cmFunc.h"/>
-         <include file="..\..\..\cmsis\core_cm4_simd.h"/>
-      </source>
-      <source file="..\..\..\accelerometers.h" lastModified="146a7192043">
-         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
-         <include file="..\..\..\cmsis_lib\include\misc.h"/>
-      </source>
       <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="1453db5bba4">
-      </source>
-      <source file="..\..\..\accelerometers.c" lastModified="146a718899c">
-         <include file="..\..\..\accelerometers.h"/>
       </source>
       <source file="..\..\..\spi_adxl.c" lastModified="145ad74c2e4">
       </source>
@@ -49,6 +29,83 @@
       <source file="..\..\..\i2c_adxl.c" lastModified="145ad81df79">
       </source>
       <source file="..\..\..\spi.c" lastModified="1458edc695a">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h" lastModified="14547761de4">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="1454781673a">
+         <include file="..\..\..\cmsis_lib\include\misc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_spi.c" lastModified="1453db64a09">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="1453db62211">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h" lastModified="1453db64a07">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="1453db5bb9a">
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="1454781908b">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="1453db62f55">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_i2c.c" lastModified="1453db6445d">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\spi_lis.c" lastModified="145ad4ed151">
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h" lastModified="1453db6220f">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+   </includePath>
+   <includePath signature="/I..\..\..\..\..\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\STM32F4_AccelerometersProject\cmsis_lib\include /I..\..\..\..\..\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\STM32F4_AccelerometersProject /I..\..\..\..\..\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\STM32F4_AccelerometersProject\cmsis_boot /I..\..\..\..\..\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\STM32F4_AccelerometersProject\cmsis /I..\..\..\..\..\Users\ksoch_000\Projects\STM32F4_AccelerometersProject /I..\..\..\..\..\Users\ksoch_000\Projects /I..\..\..\..\..\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\STM32F4_AccelerometersProject\cmsis_lib">
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h" lastModified="1453db6445b">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="1453db58c8d">
+      </source>
+      <source file="..\..\..\cmsis\core_cm4.h" lastModified="1453db58c88">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+         <include file="..\..\..\cmsis\core_cm4_simd.h"/>
+      </source>
+      <source file="..\..\..\accelerometers.h" lastModified="148bf8a6762">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
+         <include file="..\..\..\cmsis_lib\include\misc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.h" lastModified="1453db5bba4">
+      </source>
+      <source file="..\..\..\accelerometers.c" lastModified="148bf8a3933">
+         <include file="..\..\..\accelerometers.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="14547782782">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h" lastModified="14547819088">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="14547761de6">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_tim.h"/>
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h" lastModified="1453db62f53">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis_lib\include\misc.h" lastModified="14547816738">
+         <include file="..\..\..\cmsis_boot\stm32f4xx.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\stm32f4xx_conf.h" lastModified="1453db601ef">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
@@ -74,11 +131,9 @@
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_spi.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\..\..\..\..\Users\ksoch_000\Documents\i2c.c" lastModified="1458edc4700">
-      </source>
       <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="1453db58c8b">
       </source>
-      <source file="..\..\..\main.c" lastModified="146a716417a">
+      <source file="..\..\..\main.c" lastModified="148bf9f0323">
          <include file="..\..\..\accelerometers.h"/>
       </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="1453db62211">
@@ -89,16 +144,14 @@
       </source>
       <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="1453db5bb9a">
       </source>
+      <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="1454781908b">
+         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
+      </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="1453db62f55">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_gpio.h"/>
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_rcc.h"/>
       </source>
-      <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="1454781908b">
-         <include file="..\..\..\cmsis_lib\include\stm32f4xx_exti.h"/>
-      </source>
       <source file="..\..\..\cmsis\core_cm4_simd.h" lastModified="1453db58c89">
-      </source>
-      <source file="..\..\..\spi_lis.c" lastModified="145ad4ed151">
       </source>
       <source file="..\..\..\cmsis_lib\source\stm32f4xx_i2c.c" lastModified="1453db6445d">
          <include file="..\..\..\cmsis_lib\include\stm32f4xx_i2c.h"/>

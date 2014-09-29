@@ -32,6 +32,7 @@ namespace pc
             GraphPane myPane = zedGraphControl1.GraphPane;
             myPane.Title.Text = "Offsets";
 
+            port.Encoding = Encoding.GetEncoding(28591);
             port.DataReceived += new
               SerialDataReceivedEventHandler(port_DataReceived);
 
@@ -53,16 +54,19 @@ namespace pc
 
             // Sample at 50ms intervals
             timer1.Tick += new EventHandler(timer1_Tick);
-            timer1.Interval = 50;
+            timer1.Interval = 100;
             timer1.Enabled = true;
             timer1.Start();
 
             // Just manually control the X axis range so it scrolls continuously
             // instead of discrete step-sized jumps
+            myPane.XAxis.Title.Text = "Time";
             myPane.XAxis.Scale.Min = 0;
             myPane.XAxis.Scale.Max = 30;
             myPane.XAxis.Scale.MinorStep = 1;
             myPane.XAxis.Scale.MajorStep = 5;
+
+            myPane.YAxis.Title.Text = "G-force";
 
             // Scale the axes
             zedGraphControl1.AxisChange();
@@ -74,14 +78,17 @@ namespace pc
         private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             // Show all the incoming data in the port's buffer
-            byte[] bytes = Encoding.UTF8.GetBytes(port.ReadExisting());
-            if (bytes.Length < 6)
+            byte[] bytes = new byte[24];
+            if (port.BytesToRead < 24)
             {
                 return;
             }
-            UInt16 x = BitConverter.ToUInt16(bytes, 0);
-            UInt16 y = BitConverter.ToUInt16(bytes, 2);
-            UInt16 z = BitConverter.ToUInt16(bytes, 4);
+
+            port.Read(bytes, 0, 24);
+
+            Double x = BitConverter.ToDouble(bytes, 0);
+            Double y = BitConverter.ToDouble(bytes, 8);
+            Double z = BitConverter.ToDouble(bytes, 16);
 
             // Get the PointPairList
             IPointListEdit list_x = curve_x.Points as IPointListEdit;

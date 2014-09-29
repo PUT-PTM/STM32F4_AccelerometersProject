@@ -21,3 +21,4 @@ C:\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\test\pc\pc\obj\Release
 C:\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\test\pc\pc\obj\Release\pc.csproj.GenerateResource.Cache
 C:\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\test\pc\pc\obj\Release\pc.exe
 C:\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\test\pc\pc\obj\Release\pc.pdb
+C:\Users\ksoch_000\Projects\STM32F4_AccelerometersProject\test\pc\pc\obj\Release\pc.csprojResolveAssemblyReference.cache

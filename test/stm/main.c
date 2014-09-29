@@ -52,7 +52,7 @@ int main() {
 	SystemInit();
 	init();
 
-	struct Connection conn = Accelerometer_Init(LIS, I2C);
+	struct Connection conn = Accelerometer_Init(ADXL, I2C);
 
 	if (!conn.success) {
 		GPIO_ToggleBits(GPIOD, GPIO_Pin_14);
@@ -60,7 +60,7 @@ int main() {
 	} else {
 		GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
 	}
-	struct Axes axes;
+	struct AxesG axes;
 
 	while (1) {
 		/* Blink the orange LED at 1Hz */
@@ -77,8 +77,10 @@ int main() {
 		uint8_t theByte;
 		if (VCP_get_char(&theByte) && theByte == 'u')
 		{
-			axes = Accelerometer_readAxes(conn);
-			VCP_send_buffer(&axes, sizeof axes);
+			axes = Accelerometer_readAxesGforce(conn);
+			VCP_send_buffer(&axes.x, sizeof axes.x);
+			VCP_send_buffer(&axes.y, sizeof axes.y);
+			VCP_send_buffer(&axes.z, sizeof axes.z);
 			GPIOD->BSRRL = GPIO_Pin_12;
 			downTicker = 10;
 		}

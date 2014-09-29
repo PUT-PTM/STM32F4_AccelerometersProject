@@ -4,6 +4,7 @@ __IO uint32_t SPITimeout = SPI_FLAG_TIMEOUT;
 
 struct Connection Accelerometer_Init(enum Accel accel, enum Interface iface) {
 	int success = 1;
+	double scale;
 
 	SystemInit();
 	SystemCoreClockUpdate();
@@ -15,7 +16,7 @@ struct Connection Accelerometer_Init(enum Accel accel, enum Interface iface) {
 		case ADXL:
 			I2C_start(I2C1, I2C_SLAVE_ADDRESS, I2C_Direction_Transmitter);
 			I2C_write(I2C1, ADXL_REGISTRY_DATA_FORMAT);
-			I2C_write(I2C1, ADXL_RANGE_4G);
+			I2C_write(I2C1, ADXL_FULL_RES | ADXL_RANGE_2G);
 			I2C_stop(I2C1);
 			I2C_start(I2C1, I2C_SLAVE_ADDRESS, I2C_Direction_Transmitter);
 			I2C_write(I2C1, ADXL_REGISTRY_POWER_CTL);
@@ -39,7 +40,7 @@ struct Connection Accelerometer_Init(enum Accel accel, enum Interface iface) {
 		uint8_t ctrl;
 		switch (accel) {
 		case ADXL:
-			ctrl = ADXL_RANGE_4G;
+			ctrl = ADXL_FULL_RES | ADXL_RANGE_2G;
 			SPI_Write(&ctrl, ADXL_REGISTRY_DATA_FORMAT, 1);
 			ctrl = ADXL_LOWPOWERMODE_POWERDOWN;
 			SPI_Write(&ctrl, ADXL_REGISTRY_POWER_CTL, 1);
@@ -59,11 +60,21 @@ struct Connection Accelerometer_Init(enum Accel accel, enum Interface iface) {
 	default:
 		success = 0;
 	}
+	switch (accel) {
+	case ADXL:
+		scale = ADXL_mG_PER_DIGIT;
+		break;
+	case LIS:
+		scale = LIS_mG_PER_DIGIT;
+		break;
+	default:
+		scale = 1.0;
+	}
 
 	if (!success) {
 		return (struct Connection){0};
 	}
-	return (struct Connection){1, accel, iface};
+	return (struct Connection){1, accel, iface, scale};
 }
 
 // SPI
@@ -198,10 +209,10 @@ void I2C_stop(I2C_TypeDef* I2Cx) {
 	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
 }
 
-uint8_t i2c_read_registry(uint8_t axis) {
-	uint8_t temp;
+int8_t i2c_read_registry(uint8_t axes) {
+	int8_t temp;
 	I2C_start(I2C1, I2C_SLAVE_ADDRESS, I2C_Direction_Transmitter);
-	I2C_write(I2C1, axis);
+	I2C_write(I2C1, axes);
 	I2C_stop(I2C1);
 
 	I2C_start(I2C1, I2C_SLAVE_ADDRESS, I2C_Direction_Receiver);
@@ -300,8 +311,8 @@ struct Axes Accelerometer_readAxes(struct Connection conn) {
 	}
 
 	struct Axes axes = {0, 0, 0, 1};
-	uint8_t data[6];
-	uint8_t temp;
+	int8_t data[6];
+	int8_t temp;
 
 	switch (conn.accel) {
 	case ADXL:
@@ -318,16 +329,16 @@ struct Axes Accelerometer_readAxes(struct Connection conn) {
 			data[3] = I2C_read_ack(I2C1);
 			data[4] = I2C_read_ack(I2C1);
 			data[5] = I2C_read_nack(I2C1);
-			axes.x = data[1] << 8 | data[0];
-			axes.y = data[3] << 8 | data[2];
-			axes.z = data[5] << 8 | data[4];
+			axes.x = (data[1] << 8) | ((uint8_t) data[0]);
+			axes.y = (data[3] << 8) | ((uint8_t) data[2]);
+			axes.z = (data[5] << 8) | ((uint8_t) data[4]);
 			I2C_GenerateSTOP(I2C1, ENABLE);
 			break;
 		case SPI:
 			SPI_Read(data, ADXL_REGISTRY_DATAX0, 6);
-			axes.x = data[1] << 8 | data[0];
-			axes.y = data[3] << 8 | data[2];
-			axes.z = data[5] << 8 | data[4];
+			axes.x = (data[1] << 8) | ((uint8_t) data[0]);
+			axes.y = (data[3] << 8) | ((uint8_t) data[2]);
+			axes.z = (data[5] << 8) | ((uint8_t) data[4]);
 			break;
 		}
 		break;
@@ -351,4 +362,17 @@ struct Axes Accelerometer_readAxes(struct Connection conn) {
 	}
 
 	return axes;
+}
+
+struct AxesG Accelerometer_readAxesGforce(struct Connection conn) {
+	struct Axes axes = Accelerometer_readAxes(conn);
+	struct AxesG axes_g;
+	if (!axes.success) {
+		return (struct AxesG){0, 0, 0, 0};
+	}
+	axes_g.x = axes.x * conn.scale / 1000.0;
+	axes_g.y = axes.y * conn.scale / 1000.0;
+	axes_g.z = axes.z * conn.scale / 1000.0;
+	axes_g.success = 1;
+	return axes_g;
 }

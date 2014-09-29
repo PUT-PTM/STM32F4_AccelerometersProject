@@ -1,17 +1,20 @@
+Archive member included because of file (symbol)
+
+c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_addsubdf3.o)
+                              ..\obj\accelerometers.o (__aeabi_i2d)
+c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_muldivdf3.o)
+                              ..\obj\accelerometers.o (__aeabi_dmul)
 
 Allocating common symbols
 Common symbol       size              file
 
 ticker              0x4               ..\obj\main.o
 APP_Tx_Buffer       0x80              ..\obj\usbd_cdc_vcp.o
-x                   0x1               ..\obj\main.o
-z                   0x1               ..\obj\main.o
 usbd_cdc_OtherCfgDesc
                     0x43              ..\obj\usbd_cdc_core.o
 APP_tx_ptr_tail     0x4               ..\obj\usbd_cdc_vcp.o
 downTicker          0x4               ..\obj\main.o
 USB_Rx_Buffer       0x40              ..\obj\usbd_cdc_core.o
-y                   0x1               ..\obj\main.o
 USART_InitStructure
                     0x10              ..\obj\usbd_cdc_vcp.o
 CmdBuff             0x8               ..\obj\usbd_cdc_core.o
@@ -225,6 +228,8 @@ Discarded input sections
  .bss           0x00000000        0x0 ..\obj\usbd_cdc_vcp.o
  .text.VCP_put_char
                 0x00000000       0x1c ..\obj\usbd_cdc_vcp.o
+ .text.VCP_put_int16_t
+                0x00000000       0x30 ..\obj\usbd_cdc_vcp.o
  .text.VCP_send_str
                 0x00000000       0x30 ..\obj\usbd_cdc_vcp.o
  .text.VCP_get_string
@@ -627,6 +632,10 @@ Discarded input sections
  .ARM.attributes
                 0x00000000       0x33 ..\obj\stm32f4xx_tim.o
  .debug_frame   0x00000000      0xa3c ..\obj\stm32f4xx_tim.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_muldivdf3.o)
 
 Memory Configuration
 
@@ -640,590 +649,614 @@ Linker script and memory map
 
                 0x20020000                _eram = 0x20020000
 
-.text           0x08000000     0x54f0
+.text           0x08000000     0x5e4c
  *(.isr_vector)
  .isr_vector    0x08000000      0x188 ..\obj\startup_stm32f4xx.o
                 0x08000000                g_pfnVectors
  *(.text*)
  .text.Accelerometer_Init
-                0x08000188      0x138 ..\obj\accelerometers.o
+                0x08000188      0x190 ..\obj\accelerometers.o
                 0x08000188                Accelerometer_Init
  .text.SPI_init
-                0x080002c0      0x12c ..\obj\accelerometers.o
-                0x080002c0                SPI_init
+                0x08000318      0x12c ..\obj\accelerometers.o
+                0x08000318                SPI_init
  .text.I2C1_init
-                0x080003ec       0x90 ..\obj\accelerometers.o
-                0x080003ec                I2C1_init
+                0x08000444       0x90 ..\obj\accelerometers.o
+                0x08000444                I2C1_init
  .text.I2C_start
-                0x0800047c       0x88 ..\obj\accelerometers.o
-                0x0800047c                I2C_start
+                0x080004d4       0x88 ..\obj\accelerometers.o
+                0x080004d4                I2C_start
  .text.I2C_write
-                0x08000504       0x30 ..\obj\accelerometers.o
-                0x08000504                I2C_write
+                0x0800055c       0x30 ..\obj\accelerometers.o
+                0x0800055c                I2C_write
  .text.I2C_read_ack
-                0x08000534       0x3c ..\obj\accelerometers.o
-                0x08000534                I2C_read_ack
+                0x0800058c       0x3c ..\obj\accelerometers.o
+                0x0800058c                I2C_read_ack
  .text.I2C_read_nack
-                0x08000570       0x3c ..\obj\accelerometers.o
-                0x08000570                I2C_read_nack
+                0x080005c8       0x3c ..\obj\accelerometers.o
+                0x080005c8                I2C_read_nack
  .text.I2C_stop
-                0x080005ac       0x2c ..\obj\accelerometers.o
-                0x080005ac                I2C_stop
+                0x08000604       0x2c ..\obj\accelerometers.o
+                0x08000604                I2C_stop
  .text.i2c_read_registry
-                0x080005d8       0x50 ..\obj\accelerometers.o
-                0x080005d8                i2c_read_registry
+                0x08000630       0x50 ..\obj\accelerometers.o
+                0x08000630                i2c_read_registry
  .text.SPI_Write
-                0x08000628       0x60 ..\obj\accelerometers.o
-                0x08000628                SPI_Write
+                0x08000680       0x60 ..\obj\accelerometers.o
+                0x08000680                SPI_Write
  .text.SPI_SendByte
-                0x08000688       0x90 ..\obj\accelerometers.o
+                0x080006e0       0x90 ..\obj\accelerometers.o
  .text.SPI_Read
-                0x08000718       0x6c ..\obj\accelerometers.o
-                0x08000718                SPI_Read
+                0x08000770       0x6c ..\obj\accelerometers.o
+                0x08000770                SPI_Read
  .text.SPI_TIMEOUT_UserCallback
-                0x08000784        0x8 ..\obj\accelerometers.o
-                0x08000784                SPI_TIMEOUT_UserCallback
+                0x080007dc        0x8 ..\obj\accelerometers.o
+                0x080007dc                SPI_TIMEOUT_UserCallback
  .text.Accelerometer_readAxes
-                0x0800078c      0x1bc ..\obj\accelerometers.o
-                0x0800078c                Accelerometer_readAxes
+                0x080007e4      0x1e0 ..\obj\accelerometers.o
+                0x080007e4                Accelerometer_readAxes
+ .text.Accelerometer_readAxesGforce
+                0x080009c4      0x11c ..\obj\accelerometers.o
+                0x080009c4                Accelerometer_readAxesGforce
  .text.USB_OTG_EnableCommonInt
-                0x08000948       0x44 ..\obj\usb_core.o
+                0x08000ae0       0x44 ..\obj\usb_core.o
  .text.USB_OTG_CoreReset
-                0x0800098c       0x8c ..\obj\usb_core.o
+                0x08000b24       0x8c ..\obj\usb_core.o
  .text.USB_OTG_WritePacket
-                0x08000a18       0x70 ..\obj\usb_core.o
-                0x08000a18                USB_OTG_WritePacket
+                0x08000bb0       0x70 ..\obj\usb_core.o
+                0x08000bb0                USB_OTG_WritePacket
  .text.USB_OTG_ReadPacket
-                0x08000a88       0x58 ..\obj\usb_core.o
-                0x08000a88                USB_OTG_ReadPacket
+                0x08000c20       0x58 ..\obj\usb_core.o
+                0x08000c20                USB_OTG_ReadPacket
  .text.USB_OTG_SelectCore
-                0x08000ae0      0x174 ..\obj\usb_core.o
-                0x08000ae0                USB_OTG_SelectCore
+                0x08000c78      0x174 ..\obj\usb_core.o
+                0x08000c78                USB_OTG_SelectCore
  .text.USB_OTG_CoreInit
-                0x08000c54      0x1dc ..\obj\usb_core.o
-                0x08000c54                USB_OTG_CoreInit
+                0x08000dec      0x1dc ..\obj\usb_core.o
+                0x08000dec                USB_OTG_CoreInit
  .text.USB_OTG_EnableGlobalInt
-                0x08000e30       0x38 ..\obj\usb_core.o
-                0x08000e30                USB_OTG_EnableGlobalInt
+                0x08000fc8       0x38 ..\obj\usb_core.o
+                0x08000fc8                USB_OTG_EnableGlobalInt
  .text.USB_OTG_DisableGlobalInt
-                0x08000e68       0x38 ..\obj\usb_core.o
-                0x08000e68                USB_OTG_DisableGlobalInt
+                0x08001000       0x38 ..\obj\usb_core.o
+                0x08001000                USB_OTG_DisableGlobalInt
  .text.USB_OTG_FlushTxFifo
-                0x08000ea0       0x74 ..\obj\usb_core.o
-                0x08000ea0                USB_OTG_FlushTxFifo
+                0x08001038       0x74 ..\obj\usb_core.o
+                0x08001038                USB_OTG_FlushTxFifo
  .text.USB_OTG_FlushRxFifo
-                0x08000f14       0x60 ..\obj\usb_core.o
-                0x08000f14                USB_OTG_FlushRxFifo
+                0x080010ac       0x60 ..\obj\usb_core.o
+                0x080010ac                USB_OTG_FlushRxFifo
  .text.USB_OTG_SetCurrentMode
-                0x08000f74       0x60 ..\obj\usb_core.o
-                0x08000f74                USB_OTG_SetCurrentMode
+                0x0800110c       0x60 ..\obj\usb_core.o
+                0x0800110c                USB_OTG_SetCurrentMode
  .text.USB_OTG_GetMode
-                0x08000fd4       0x20 ..\obj\usb_core.o
-                0x08000fd4                USB_OTG_GetMode
+                0x0800116c       0x20 ..\obj\usb_core.o
+                0x0800116c                USB_OTG_GetMode
  .text.USB_OTG_IsDeviceMode
-                0x08000ff4       0x24 ..\obj\usb_core.o
-                0x08000ff4                USB_OTG_IsDeviceMode
+                0x0800118c       0x24 ..\obj\usb_core.o
+                0x0800118c                USB_OTG_IsDeviceMode
  .text.USB_OTG_ReadCoreItr
-                0x08001018       0x30 ..\obj\usb_core.o
-                0x08001018                USB_OTG_ReadCoreItr
+                0x080011b0       0x30 ..\obj\usb_core.o
+                0x080011b0                USB_OTG_ReadCoreItr
  .text.USB_OTG_InitDevSpeed
-                0x08001048       0x38 ..\obj\usb_core.o
-                0x08001048                USB_OTG_InitDevSpeed
+                0x080011e0       0x38 ..\obj\usb_core.o
+                0x080011e0                USB_OTG_InitDevSpeed
  .text.USB_OTG_CoreInitDev
-                0x08001080      0x27c ..\obj\usb_core.o
-                0x08001080                USB_OTG_CoreInitDev
+                0x08001218      0x27c ..\obj\usb_core.o
+                0x08001218                USB_OTG_CoreInitDev
  .text.USB_OTG_EnableDevInt
-                0x080012fc       0x98 ..\obj\usb_core.o
-                0x080012fc                USB_OTG_EnableDevInt
+                0x08001494       0x98 ..\obj\usb_core.o
+                0x08001494                USB_OTG_EnableDevInt
  .text.USB_OTG_GetDeviceSpeed
-                0x08001394       0x48 ..\obj\usb_core.o
-                0x08001394                USB_OTG_GetDeviceSpeed
+                0x0800152c       0x48 ..\obj\usb_core.o
+                0x0800152c                USB_OTG_GetDeviceSpeed
  .text.USB_OTG_EP0Activate
-                0x080013dc       0x78 ..\obj\usb_core.o
-                0x080013dc                USB_OTG_EP0Activate
+                0x08001574       0x78 ..\obj\usb_core.o
+                0x08001574                USB_OTG_EP0Activate
  .text.USB_OTG_EPActivate
-                0x08001454       0xdc ..\obj\usb_core.o
-                0x08001454                USB_OTG_EPActivate
+                0x080015ec       0xdc ..\obj\usb_core.o
+                0x080015ec                USB_OTG_EPActivate
  .text.USB_OTG_EPDeactivate
-                0x08001530       0x8c ..\obj\usb_core.o
-                0x08001530                USB_OTG_EPDeactivate
+                0x080016c8       0x8c ..\obj\usb_core.o
+                0x080016c8                USB_OTG_EPDeactivate
  .text.USB_OTG_EPStartXfer
-                0x080015bc      0x280 ..\obj\usb_core.o
-                0x080015bc                USB_OTG_EPStartXfer
+                0x08001754      0x280 ..\obj\usb_core.o
+                0x08001754                USB_OTG_EPStartXfer
  .text.USB_OTG_EP0StartXfer
-                0x0800183c      0x1d4 ..\obj\usb_core.o
-                0x0800183c                USB_OTG_EP0StartXfer
+                0x080019d4      0x1d4 ..\obj\usb_core.o
+                0x080019d4                USB_OTG_EP0StartXfer
  .text.USB_OTG_EPSetStall
-                0x08001a10       0x88 ..\obj\usb_core.o
-                0x08001a10                USB_OTG_EPSetStall
+                0x08001ba8       0x88 ..\obj\usb_core.o
+                0x08001ba8                USB_OTG_EPSetStall
  .text.USB_OTG_EPClearStall
-                0x08001a98       0x78 ..\obj\usb_core.o
-                0x08001a98                USB_OTG_EPClearStall
+                0x08001c30       0x78 ..\obj\usb_core.o
+                0x08001c30                USB_OTG_EPClearStall
  .text.USB_OTG_ReadDevAllOutEp_itr
-                0x08001b10       0x2c ..\obj\usb_core.o
-                0x08001b10                USB_OTG_ReadDevAllOutEp_itr
+                0x08001ca8       0x2c ..\obj\usb_core.o
+                0x08001ca8                USB_OTG_ReadDevAllOutEp_itr
  .text.USB_OTG_ReadDevOutEP_itr
-                0x08001b3c       0x38 ..\obj\usb_core.o
-                0x08001b3c                USB_OTG_ReadDevOutEP_itr
+                0x08001cd4       0x38 ..\obj\usb_core.o
+                0x08001cd4                USB_OTG_ReadDevOutEP_itr
  .text.USB_OTG_ReadDevAllInEPItr
-                0x08001b74       0x2c ..\obj\usb_core.o
-                0x08001b74                USB_OTG_ReadDevAllInEPItr
+                0x08001d0c       0x2c ..\obj\usb_core.o
+                0x08001d0c                USB_OTG_ReadDevAllInEPItr
  .text.USB_OTG_EP0_OutStart
-                0x08001ba0       0x70 ..\obj\usb_core.o
-                0x08001ba0                USB_OTG_EP0_OutStart
+                0x08001d38       0x70 ..\obj\usb_core.o
+                0x08001d38                USB_OTG_EP0_OutStart
  .text.USB_OTG_UngateClock
-                0x08001c10       0x54 ..\obj\usb_core.o
-                0x08001c10                USB_OTG_UngateClock
+                0x08001da8       0x54 ..\obj\usb_core.o
+                0x08001da8                USB_OTG_UngateClock
  .text.USBD_USR_Init
-                0x08001c64        0xc ..\obj\usbd_usr.o
-                0x08001c64                USBD_USR_Init
+                0x08001dfc        0xc ..\obj\usbd_usr.o
+                0x08001dfc                USBD_USR_Init
  .text.USBD_USR_DeviceReset
-                0x08001c70       0x28 ..\obj\usbd_usr.o
-                0x08001c70                USBD_USR_DeviceReset
+                0x08001e08       0x28 ..\obj\usbd_usr.o
+                0x08001e08                USBD_USR_DeviceReset
  .text.USBD_USR_DeviceConfigured
-                0x08001c98        0xc ..\obj\usbd_usr.o
-                0x08001c98                USBD_USR_DeviceConfigured
+                0x08001e30        0xc ..\obj\usbd_usr.o
+                0x08001e30                USBD_USR_DeviceConfigured
  .text.USBD_USR_DeviceConnected
-                0x08001ca4        0xc ..\obj\usbd_usr.o
-                0x08001ca4                USBD_USR_DeviceConnected
+                0x08001e3c        0xc ..\obj\usbd_usr.o
+                0x08001e3c                USBD_USR_DeviceConnected
  .text.USBD_USR_DeviceDisconnected
-                0x08001cb0        0xc ..\obj\usbd_usr.o
-                0x08001cb0                USBD_USR_DeviceDisconnected
+                0x08001e48        0xc ..\obj\usbd_usr.o
+                0x08001e48                USBD_USR_DeviceDisconnected
  .text.USBD_USR_DeviceSuspended
-                0x08001cbc        0xc ..\obj\usbd_usr.o
-                0x08001cbc                USBD_USR_DeviceSuspended
+                0x08001e54        0xc ..\obj\usbd_usr.o
+                0x08001e54                USBD_USR_DeviceSuspended
  .text.USBD_USR_DeviceResumed
-                0x08001cc8        0xc ..\obj\usbd_usr.o
-                0x08001cc8                USBD_USR_DeviceResumed
+                0x08001e60        0xc ..\obj\usbd_usr.o
+                0x08001e60                USBD_USR_DeviceResumed
  .text.Default_Reset_Handler
-                0x08001cd4       0x5c ..\obj\startup_stm32f4xx.o
-                0x08001cd4                Default_Reset_Handler
-                0x08001cd4                Reset_Handler
+                0x08001e6c       0x5c ..\obj\startup_stm32f4xx.o
+                0x08001e6c                Default_Reset_Handler
+                0x08001e6c                Reset_Handler
  .text.Default_Handler
-                0x08001d30        0x8 ..\obj\startup_stm32f4xx.o
-                0x08001d30                RTC_Alarm_IRQHandler
-                0x08001d30                HASH_RNG_IRQHandler
-                0x08001d30                EXTI2_IRQHandler
-                0x08001d30                TIM8_CC_IRQHandler
-                0x08001d30                TIM1_CC_IRQHandler
-                0x08001d30                DMA2_Stream5_IRQHandler
-                0x08001d30                DMA1_Stream5_IRQHandler
-                0x08001d30                PVD_IRQHandler
-                0x08001d30                SDIO_IRQHandler
-                0x08001d30                TAMP_STAMP_IRQHandler
-                0x08001d30                CAN2_RX1_IRQHandler
-                0x08001d30                EXTI3_IRQHandler
-                0x08001d30                TIM8_TRG_COM_TIM14_IRQHandler
-                0x08001d30                TIM1_UP_TIM10_IRQHandler
-                0x08001d30                TIM8_UP_TIM13_IRQHandler
-                0x08001d30                I2C3_ER_IRQHandler
-                0x08001d30                EXTI0_IRQHandler
-                0x08001d30                I2C2_EV_IRQHandler
-                0x08001d30                DMA1_Stream2_IRQHandler
-                0x08001d30                CAN1_RX0_IRQHandler
-                0x08001d30                FPU_IRQHandler
-                0x08001d30                OTG_HS_WKUP_IRQHandler
-                0x08001d30                CAN2_SCE_IRQHandler
-                0x08001d30                DMA2_Stream2_IRQHandler
-                0x08001d30                SPI1_IRQHandler
-                0x08001d30                TIM6_DAC_IRQHandler
-                0x08001d30                TIM1_BRK_TIM9_IRQHandler
-                0x08001d30                DCMI_IRQHandler
-                0x08001d30                CAN2_RX0_IRQHandler
-                0x08001d30                DMA2_Stream3_IRQHandler
-                0x08001d30                USART6_IRQHandler
-                0x08001d30                USART3_IRQHandler
-                0x08001d30                CRYP_IRQHandler
-                0x08001d30                CAN1_RX1_IRQHandler
-                0x08001d30                UART5_IRQHandler
-                0x08001d30                DMA2_Stream0_IRQHandler
-                0x08001d30                TIM4_IRQHandler
-                0x08001d30                I2C1_EV_IRQHandler
-                0x08001d30                DMA1_Stream6_IRQHandler
-                0x08001d30                DMA1_Stream1_IRQHandler
-                0x08001d30                UART4_IRQHandler
-                0x08001d30                TIM3_IRQHandler
-                0x08001d30                RCC_IRQHandler
-                0x08001d30                TIM8_BRK_TIM12_IRQHandler
-                0x08001d30                EXTI15_10_IRQHandler
-                0x08001d30                ADC_IRQHandler
-                0x08001d30                DMA1_Stream7_IRQHandler
-                0x08001d30                TIM7_IRQHandler
-                0x08001d30                CAN2_TX_IRQHandler
-                0x08001d30                TIM5_IRQHandler
-                0x08001d30                DMA2_Stream7_IRQHandler
-                0x08001d30                I2C3_EV_IRQHandler
-                0x08001d30                EXTI9_5_IRQHandler
-                0x08001d30                RTC_WKUP_IRQHandler
-                0x08001d30                ETH_WKUP_IRQHandler
-                0x08001d30                SPI2_IRQHandler
-                0x08001d30                OTG_HS_EP1_IN_IRQHandler
-                0x08001d30                DMA1_Stream0_IRQHandler
-                0x08001d30                CAN1_TX_IRQHandler
-                0x08001d30                EXTI4_IRQHandler
-                0x08001d30                FSMC_IRQHandler
-                0x08001d30                ETH_IRQHandler
-                0x08001d30                OTG_HS_EP1_OUT_IRQHandler
-                0x08001d30                WWDG_IRQHandler
-                0x08001d30                TIM2_IRQHandler
-                0x08001d30                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08001d30                OTG_HS_IRQHandler
-                0x08001d30                EXTI1_IRQHandler
-                0x08001d30                USART2_IRQHandler
-                0x08001d30                I2C2_ER_IRQHandler
-                0x08001d30                DMA2_Stream1_IRQHandler
-                0x08001d30                CAN1_SCE_IRQHandler
-                0x08001d30                FLASH_IRQHandler
-                0x08001d30                DMA2_Stream4_IRQHandler
-                0x08001d30                USART1_IRQHandler
-                0x08001d30                SPI3_IRQHandler
-                0x08001d30                DMA1_Stream4_IRQHandler
-                0x08001d30                I2C1_ER_IRQHandler
-                0x08001d30                DMA2_Stream6_IRQHandler
-                0x08001d30                DMA1_Stream3_IRQHandler
+                0x08001ec8        0x8 ..\obj\startup_stm32f4xx.o
+                0x08001ec8                RTC_Alarm_IRQHandler
+                0x08001ec8                HASH_RNG_IRQHandler
+                0x08001ec8                EXTI2_IRQHandler
+                0x08001ec8                TIM8_CC_IRQHandler
+                0x08001ec8                TIM1_CC_IRQHandler
+                0x08001ec8                DMA2_Stream5_IRQHandler
+                0x08001ec8                DMA1_Stream5_IRQHandler
+                0x08001ec8                PVD_IRQHandler
+                0x08001ec8                SDIO_IRQHandler
+                0x08001ec8                TAMP_STAMP_IRQHandler
+                0x08001ec8                CAN2_RX1_IRQHandler
+                0x08001ec8                EXTI3_IRQHandler
+                0x08001ec8                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08001ec8                TIM1_UP_TIM10_IRQHandler
+                0x08001ec8                TIM8_UP_TIM13_IRQHandler
+                0x08001ec8                I2C3_ER_IRQHandler
+                0x08001ec8                EXTI0_IRQHandler
+                0x08001ec8                I2C2_EV_IRQHandler
+                0x08001ec8                DMA1_Stream2_IRQHandler
+                0x08001ec8                CAN1_RX0_IRQHandler
+                0x08001ec8                FPU_IRQHandler
+                0x08001ec8                OTG_HS_WKUP_IRQHandler
+                0x08001ec8                CAN2_SCE_IRQHandler
+                0x08001ec8                DMA2_Stream2_IRQHandler
+                0x08001ec8                SPI1_IRQHandler
+                0x08001ec8                TIM6_DAC_IRQHandler
+                0x08001ec8                TIM1_BRK_TIM9_IRQHandler
+                0x08001ec8                DCMI_IRQHandler
+                0x08001ec8                CAN2_RX0_IRQHandler
+                0x08001ec8                DMA2_Stream3_IRQHandler
+                0x08001ec8                USART6_IRQHandler
+                0x08001ec8                USART3_IRQHandler
+                0x08001ec8                CRYP_IRQHandler
+                0x08001ec8                CAN1_RX1_IRQHandler
+                0x08001ec8                UART5_IRQHandler
+                0x08001ec8                DMA2_Stream0_IRQHandler
+                0x08001ec8                TIM4_IRQHandler
+                0x08001ec8                I2C1_EV_IRQHandler
+                0x08001ec8                DMA1_Stream6_IRQHandler
+                0x08001ec8                DMA1_Stream1_IRQHandler
+                0x08001ec8                UART4_IRQHandler
+                0x08001ec8                TIM3_IRQHandler
+                0x08001ec8                RCC_IRQHandler
+                0x08001ec8                TIM8_BRK_TIM12_IRQHandler
+                0x08001ec8                EXTI15_10_IRQHandler
+                0x08001ec8                ADC_IRQHandler
+                0x08001ec8                DMA1_Stream7_IRQHandler
+                0x08001ec8                TIM7_IRQHandler
+                0x08001ec8                CAN2_TX_IRQHandler
+                0x08001ec8                TIM5_IRQHandler
+                0x08001ec8                DMA2_Stream7_IRQHandler
+                0x08001ec8                I2C3_EV_IRQHandler
+                0x08001ec8                EXTI9_5_IRQHandler
+                0x08001ec8                RTC_WKUP_IRQHandler
+                0x08001ec8                ETH_WKUP_IRQHandler
+                0x08001ec8                SPI2_IRQHandler
+                0x08001ec8                OTG_HS_EP1_IN_IRQHandler
+                0x08001ec8                DMA1_Stream0_IRQHandler
+                0x08001ec8                CAN1_TX_IRQHandler
+                0x08001ec8                EXTI4_IRQHandler
+                0x08001ec8                FSMC_IRQHandler
+                0x08001ec8                ETH_IRQHandler
+                0x08001ec8                OTG_HS_EP1_OUT_IRQHandler
+                0x08001ec8                WWDG_IRQHandler
+                0x08001ec8                TIM2_IRQHandler
+                0x08001ec8                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08001ec8                OTG_HS_IRQHandler
+                0x08001ec8                EXTI1_IRQHandler
+                0x08001ec8                USART2_IRQHandler
+                0x08001ec8                I2C2_ER_IRQHandler
+                0x08001ec8                DMA2_Stream1_IRQHandler
+                0x08001ec8                CAN1_SCE_IRQHandler
+                0x08001ec8                FLASH_IRQHandler
+                0x08001ec8                DMA2_Stream4_IRQHandler
+                0x08001ec8                USART1_IRQHandler
+                0x08001ec8                SPI3_IRQHandler
+                0x08001ec8                DMA1_Stream4_IRQHandler
+                0x08001ec8                I2C1_ER_IRQHandler
+                0x08001ec8                DMA2_Stream6_IRQHandler
+                0x08001ec8                DMA1_Stream3_IRQHandler
  .text.USBD_Init
-                0x08001d38       0x54 ..\obj\usbd_core.o
-                0x08001d38                USBD_Init
+                0x08001ed0       0x54 ..\obj\usbd_core.o
+                0x08001ed0                USBD_Init
  .text.USBD_DeInit
-                0x08001d8c       0x18 ..\obj\usbd_core.o
-                0x08001d8c                USBD_DeInit
+                0x08001f24       0x18 ..\obj\usbd_core.o
+                0x08001f24                USBD_DeInit
  .text.USBD_SetupStage
-                0x08001da4       0x6c ..\obj\usbd_core.o
+                0x08001f3c       0x6c ..\obj\usbd_core.o
  .text.USBD_DataOutStage
-                0x08001e10       0xd0 ..\obj\usbd_core.o
+                0x08001fa8       0xd0 ..\obj\usbd_core.o
  .text.USBD_DataInStage
-                0x08001ee0      0x104 ..\obj\usbd_core.o
+                0x08002078      0x104 ..\obj\usbd_core.o
  .text.USBD_Reset
-                0x08001fe4       0x44 ..\obj\usbd_core.o
+                0x0800217c       0x44 ..\obj\usbd_core.o
  .text.USBD_Resume
-                0x08002028       0x24 ..\obj\usbd_core.o
+                0x080021c0       0x24 ..\obj\usbd_core.o
  .text.USBD_Suspend
-                0x0800204c       0x24 ..\obj\usbd_core.o
+                0x080021e4       0x24 ..\obj\usbd_core.o
  .text.USBD_SOF
-                0x08002070       0x2c ..\obj\usbd_core.o
+                0x08002208       0x2c ..\obj\usbd_core.o
  .text.USBD_SetCfg
-                0x0800209c       0x30 ..\obj\usbd_core.o
-                0x0800209c                USBD_SetCfg
+                0x08002234       0x30 ..\obj\usbd_core.o
+                0x08002234                USBD_SetCfg
  .text.USBD_ClrCfg
-                0x080020cc       0x28 ..\obj\usbd_core.o
-                0x080020cc                USBD_ClrCfg
+                0x08002264       0x28 ..\obj\usbd_core.o
+                0x08002264                USBD_ClrCfg
  .text.USBD_IsoINIncomplete
-                0x080020f4       0x20 ..\obj\usbd_core.o
+                0x0800228c       0x20 ..\obj\usbd_core.o
  .text.USBD_IsoOUTIncomplete
-                0x08002114       0x20 ..\obj\usbd_core.o
+                0x080022ac       0x20 ..\obj\usbd_core.o
  .text.NVIC_SetPriority
-                0x08002134       0x54 ..\obj\main.o
+                0x080022cc       0x54 ..\obj\main.o
  .text.SysTick_Config
-                0x08002188       0x44 ..\obj\main.o
- .text.main     0x080021cc       0xdc ..\obj\main.o
-                0x080021cc                main
- .text.init     0x080022a8       0x80 ..\obj\main.o
-                0x080022a8                init
+                0x08002320       0x44 ..\obj\main.o
+ .text.main     0x08002364      0x10c ..\obj\main.o
+                0x08002364                main
+ .text.init     0x08002470       0x80 ..\obj\main.o
+                0x08002470                init
  .text.ColorfulRingOfDeath
-                0x08002328       0x4c ..\obj\main.o
-                0x08002328                ColorfulRingOfDeath
+                0x080024f0       0x4c ..\obj\main.o
+                0x080024f0                ColorfulRingOfDeath
  .text.SysTick_Handler
-                0x08002374       0x30 ..\obj\main.o
-                0x08002374                SysTick_Handler
+                0x0800253c       0x30 ..\obj\main.o
+                0x0800253c                SysTick_Handler
  .text.NMI_Handler
-                0x080023a4        0xc ..\obj\main.o
-                0x080023a4                NMI_Handler
+                0x0800256c        0xc ..\obj\main.o
+                0x0800256c                NMI_Handler
  .text.HardFault_Handler
-                0x080023b0        0xc ..\obj\main.o
-                0x080023b0                HardFault_Handler
+                0x08002578        0xc ..\obj\main.o
+                0x08002578                HardFault_Handler
  .text.MemManage_Handler
-                0x080023bc        0xc ..\obj\main.o
-                0x080023bc                MemManage_Handler
+                0x08002584        0xc ..\obj\main.o
+                0x08002584                MemManage_Handler
  .text.BusFault_Handler
-                0x080023c8        0xc ..\obj\main.o
-                0x080023c8                BusFault_Handler
+                0x08002590        0xc ..\obj\main.o
+                0x08002590                BusFault_Handler
  .text.UsageFault_Handler
-                0x080023d4        0xc ..\obj\main.o
-                0x080023d4                UsageFault_Handler
+                0x0800259c        0xc ..\obj\main.o
+                0x0800259c                UsageFault_Handler
  .text.SVC_Handler
-                0x080023e0        0xc ..\obj\main.o
-                0x080023e0                SVC_Handler
+                0x080025a8        0xc ..\obj\main.o
+                0x080025a8                SVC_Handler
  .text.DebugMon_Handler
-                0x080023ec        0xc ..\obj\main.o
-                0x080023ec                DebugMon_Handler
+                0x080025b4        0xc ..\obj\main.o
+                0x080025b4                DebugMon_Handler
  .text.PendSV_Handler
-                0x080023f8        0xc ..\obj\main.o
-                0x080023f8                PendSV_Handler
+                0x080025c0        0xc ..\obj\main.o
+                0x080025c0                PendSV_Handler
  .text.OTG_FS_IRQHandler
-                0x08002404       0x10 ..\obj\main.o
-                0x08002404                OTG_FS_IRQHandler
+                0x080025cc       0x10 ..\obj\main.o
+                0x080025cc                OTG_FS_IRQHandler
  .text.OTG_FS_WKUP_IRQHandler
-                0x08002414       0x34 ..\obj\main.o
-                0x08002414                OTG_FS_WKUP_IRQHandler
+                0x080025dc       0x34 ..\obj\main.o
+                0x080025dc                OTG_FS_WKUP_IRQHandler
  .text.RCC_GetClocksFreq
-                0x08002448      0x154 ..\obj\stm32f4xx_rcc.o
-                0x08002448                RCC_GetClocksFreq
+                0x08002610      0x154 ..\obj\stm32f4xx_rcc.o
+                0x08002610                RCC_GetClocksFreq
  .text.RCC_AHB1PeriphClockCmd
-                0x0800259c       0x3c ..\obj\stm32f4xx_rcc.o
-                0x0800259c                RCC_AHB1PeriphClockCmd
+                0x08002764       0x3c ..\obj\stm32f4xx_rcc.o
+                0x08002764                RCC_AHB1PeriphClockCmd
  .text.RCC_AHB2PeriphClockCmd
-                0x080025d8       0x3c ..\obj\stm32f4xx_rcc.o
-                0x080025d8                RCC_AHB2PeriphClockCmd
+                0x080027a0       0x3c ..\obj\stm32f4xx_rcc.o
+                0x080027a0                RCC_AHB2PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x08002614       0x3c ..\obj\stm32f4xx_rcc.o
-                0x08002614                RCC_APB1PeriphClockCmd
+                0x080027dc       0x3c ..\obj\stm32f4xx_rcc.o
+                0x080027dc                RCC_APB1PeriphClockCmd
  .text.RCC_APB2PeriphClockCmd
-                0x08002650       0x3c ..\obj\stm32f4xx_rcc.o
-                0x08002650                RCC_APB2PeriphClockCmd
+                0x08002818       0x3c ..\obj\stm32f4xx_rcc.o
+                0x08002818                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphResetCmd
-                0x0800268c       0x3c ..\obj\stm32f4xx_rcc.o
-                0x0800268c                RCC_APB1PeriphResetCmd
+                0x08002854       0x3c ..\obj\stm32f4xx_rcc.o
+                0x08002854                RCC_APB1PeriphResetCmd
  .text.RCC_APB2PeriphResetCmd
-                0x080026c8       0x3c ..\obj\stm32f4xx_rcc.o
-                0x080026c8                RCC_APB2PeriphResetCmd
+                0x08002890       0x3c ..\obj\stm32f4xx_rcc.o
+                0x08002890                RCC_APB2PeriphResetCmd
  .text.USBD_USR_DeviceDescriptor
-                0x08002704       0x24 ..\obj\usbd_desc.o
-                0x08002704                USBD_USR_DeviceDescriptor
+                0x080028cc       0x24 ..\obj\usbd_desc.o
+                0x080028cc                USBD_USR_DeviceDescriptor
  .text.USBD_USR_LangIDStrDescriptor
-                0x08002728       0x24 ..\obj\usbd_desc.o
-                0x08002728                USBD_USR_LangIDStrDescriptor
+                0x080028f0       0x24 ..\obj\usbd_desc.o
+                0x080028f0                USBD_USR_LangIDStrDescriptor
  .text.USBD_USR_ProductStrDescriptor
-                0x0800274c       0x40 ..\obj\usbd_desc.o
-                0x0800274c                USBD_USR_ProductStrDescriptor
+                0x08002914       0x40 ..\obj\usbd_desc.o
+                0x08002914                USBD_USR_ProductStrDescriptor
  .text.USBD_USR_ManufacturerStrDescriptor
-                0x0800278c       0x28 ..\obj\usbd_desc.o
-                0x0800278c                USBD_USR_ManufacturerStrDescriptor
+                0x08002954       0x28 ..\obj\usbd_desc.o
+                0x08002954                USBD_USR_ManufacturerStrDescriptor
  .text.USBD_USR_SerialStrDescriptor
-                0x080027b4       0x40 ..\obj\usbd_desc.o
-                0x080027b4                USBD_USR_SerialStrDescriptor
+                0x0800297c       0x40 ..\obj\usbd_desc.o
+                0x0800297c                USBD_USR_SerialStrDescriptor
  .text.USBD_USR_ConfigStrDescriptor
-                0x080027f4       0x3c ..\obj\usbd_desc.o
-                0x080027f4                USBD_USR_ConfigStrDescriptor
+                0x080029bc       0x3c ..\obj\usbd_desc.o
+                0x080029bc                USBD_USR_ConfigStrDescriptor
  .text.USBD_USR_InterfaceStrDescriptor
-                0x08002830       0x3c ..\obj\usbd_desc.o
-                0x08002830                USBD_USR_InterfaceStrDescriptor
+                0x080029f8       0x3c ..\obj\usbd_desc.o
+                0x080029f8                USBD_USR_InterfaceStrDescriptor
  .text.GPIO_Init
-                0x0800286c      0x11c ..\obj\stm32f4xx_gpio.o
-                0x0800286c                GPIO_Init
+                0x08002a34      0x11c ..\obj\stm32f4xx_gpio.o
+                0x08002a34                GPIO_Init
  .text.GPIO_SetBits
-                0x08002988       0x1c ..\obj\stm32f4xx_gpio.o
-                0x08002988                GPIO_SetBits
+                0x08002b50       0x1c ..\obj\stm32f4xx_gpio.o
+                0x08002b50                GPIO_SetBits
  .text.GPIO_ResetBits
-                0x080029a4       0x1c ..\obj\stm32f4xx_gpio.o
-                0x080029a4                GPIO_ResetBits
+                0x08002b6c       0x1c ..\obj\stm32f4xx_gpio.o
+                0x08002b6c                GPIO_ResetBits
  .text.GPIO_ToggleBits
-                0x080029c0       0x24 ..\obj\stm32f4xx_gpio.o
-                0x080029c0                GPIO_ToggleBits
+                0x08002b88       0x24 ..\obj\stm32f4xx_gpio.o
+                0x08002b88                GPIO_ToggleBits
  .text.GPIO_PinAFConfig
-                0x080029e4       0x8c ..\obj\stm32f4xx_gpio.o
-                0x080029e4                GPIO_PinAFConfig
+                0x08002bac       0x8c ..\obj\stm32f4xx_gpio.o
+                0x08002bac                GPIO_PinAFConfig
  .text.VCP_Init
-                0x08002a70       0x10 ..\obj\usbd_cdc_vcp.o
+                0x08002c38       0x10 ..\obj\usbd_cdc_vcp.o
  .text.VCP_DeInit
-                0x08002a80       0x10 ..\obj\usbd_cdc_vcp.o
+                0x08002c48       0x10 ..\obj\usbd_cdc_vcp.o
  .text.VCP_Ctrl
-                0x08002a90      0x110 ..\obj\usbd_cdc_vcp.o
+                0x08002c58      0x110 ..\obj\usbd_cdc_vcp.o
  .text.VCP_send_buffer
-                0x08002ba0       0x1c ..\obj\usbd_cdc_vcp.o
-                0x08002ba0                VCP_send_buffer
+                0x08002d68       0x1c ..\obj\usbd_cdc_vcp.o
+                0x08002d68                VCP_send_buffer
  .text.VCP_DataTx
-                0x08002bbc       0x60 ..\obj\usbd_cdc_vcp.o
+                0x08002d84       0x60 ..\obj\usbd_cdc_vcp.o
  .text.VCP_DataRx
-                0x08002c1c       0x70 ..\obj\usbd_cdc_vcp.o
+                0x08002de4       0x70 ..\obj\usbd_cdc_vcp.o
  .text.VCP_get_char
-                0x08002c8c       0x58 ..\obj\usbd_cdc_vcp.o
-                0x08002c8c                VCP_get_char
+                0x08002e54       0x58 ..\obj\usbd_cdc_vcp.o
+                0x08002e54                VCP_get_char
  .text.SystemInit
-                0x08002ce4       0x58 ..\obj\system_stm32f4xx.o
-                0x08002ce4                SystemInit
+                0x08002eac       0x58 ..\obj\system_stm32f4xx.o
+                0x08002eac                SystemInit
  .text.SystemCoreClockUpdate
-                0x08002d3c       0xf8 ..\obj\system_stm32f4xx.o
-                0x08002d3c                SystemCoreClockUpdate
+                0x08002f04       0xf8 ..\obj\system_stm32f4xx.o
+                0x08002f04                SystemCoreClockUpdate
  .text.SetSysClock
-                0x08002e34       0xf4 ..\obj\system_stm32f4xx.o
+                0x08002ffc       0xf4 ..\obj\system_stm32f4xx.o
  .text.USB_OTG_BSP_Init
-                0x08002f28       0xb0 ..\obj\usb_bsp.o
-                0x08002f28                USB_OTG_BSP_Init
+                0x080030f0       0xb0 ..\obj\usb_bsp.o
+                0x080030f0                USB_OTG_BSP_Init
  .text.USB_OTG_BSP_EnableInterrupt
-                0x08002fd8       0x30 ..\obj\usb_bsp.o
-                0x08002fd8                USB_OTG_BSP_EnableInterrupt
+                0x080031a0       0x30 ..\obj\usb_bsp.o
+                0x080031a0                USB_OTG_BSP_EnableInterrupt
  .text.USB_OTG_BSP_uDelay
-                0x08003008       0x48 ..\obj\usb_bsp.o
-                0x08003008                USB_OTG_BSP_uDelay
+                0x080031d0       0x48 ..\obj\usb_bsp.o
+                0x080031d0                USB_OTG_BSP_uDelay
  .text.USB_OTG_BSP_mDelay
-                0x08003050       0x20 ..\obj\usb_bsp.o
-                0x08003050                USB_OTG_BSP_mDelay
+                0x08003218       0x20 ..\obj\usb_bsp.o
+                0x08003218                USB_OTG_BSP_mDelay
  .text.USBD_StdDevReq
-                0x08003070       0xa0 ..\obj\usbd_req.o
-                0x08003070                USBD_StdDevReq
+                0x08003238       0xa0 ..\obj\usbd_req.o
+                0x08003238                USBD_StdDevReq
  .text.USBD_StdItfReq
-                0x08003110       0x68 ..\obj\usbd_req.o
-                0x08003110                USBD_StdItfReq
+                0x080032d8       0x68 ..\obj\usbd_req.o
+                0x080032d8                USBD_StdItfReq
  .text.USBD_StdEPReq
-                0x08003178      0x1b0 ..\obj\usbd_req.o
-                0x08003178                USBD_StdEPReq
+                0x08003340      0x1b0 ..\obj\usbd_req.o
+                0x08003340                USBD_StdEPReq
  .text.USBD_GetDescriptor
-                0x08003328      0x1b8 ..\obj\usbd_req.o
+                0x080034f0      0x1b8 ..\obj\usbd_req.o
  .text.USBD_SetAddress
-                0x080034e0       0x7c ..\obj\usbd_req.o
+                0x080036a8       0x7c ..\obj\usbd_req.o
  .text.USBD_SetConfig
-                0x0800355c       0xf4 ..\obj\usbd_req.o
+                0x08003724       0xf4 ..\obj\usbd_req.o
  .text.USBD_GetConfig
-                0x08003650       0x60 ..\obj\usbd_req.o
+                0x08003818       0x60 ..\obj\usbd_req.o
  .text.USBD_GetStatus
-                0x080036b0       0x50 ..\obj\usbd_req.o
+                0x08003878       0x50 ..\obj\usbd_req.o
  .text.USBD_SetFeature
-                0x08003700       0xcc ..\obj\usbd_req.o
+                0x080038c8       0xcc ..\obj\usbd_req.o
  .text.USBD_ClrFeature
-                0x080037cc       0x50 ..\obj\usbd_req.o
+                0x08003994       0x50 ..\obj\usbd_req.o
  .text.USBD_ParseSetupRequest
-                0x0800381c       0x8c ..\obj\usbd_req.o
-                0x0800381c                USBD_ParseSetupRequest
+                0x080039e4       0x8c ..\obj\usbd_req.o
+                0x080039e4                USBD_ParseSetupRequest
  .text.USBD_CtlError
-                0x080038a8       0x48 ..\obj\usbd_req.o
-                0x080038a8                USBD_CtlError
+                0x08003a70       0x48 ..\obj\usbd_req.o
+                0x08003a70                USBD_CtlError
  .text.USBD_GetString
-                0x080038f0       0x7c ..\obj\usbd_req.o
-                0x080038f0                USBD_GetString
+                0x08003ab8       0x7c ..\obj\usbd_req.o
+                0x08003ab8                USBD_GetString
  .text.USBD_GetLen
-                0x0800396c       0x30 ..\obj\usbd_req.o
+                0x08003b34       0x30 ..\obj\usbd_req.o
  .text.USBD_OTG_ISR_Handler
-                0x0800399c      0x15c ..\obj\usb_dcd_int.o
-                0x0800399c                USBD_OTG_ISR_Handler
+                0x08003b64      0x15c ..\obj\usb_dcd_int.o
+                0x08003b64                USBD_OTG_ISR_Handler
  .text.DCD_HandleResume_ISR
-                0x08003af8       0x80 ..\obj\usb_dcd_int.o
+                0x08003cc0       0x80 ..\obj\usb_dcd_int.o
  .text.DCD_HandleUSBSuspend_ISR
-                0x08003b78       0x9c ..\obj\usb_dcd_int.o
+                0x08003d40       0x9c ..\obj\usb_dcd_int.o
  .text.DCD_HandleInEP_ISR
-                0x08003c14      0x1ec ..\obj\usb_dcd_int.o
+                0x08003ddc      0x1ec ..\obj\usb_dcd_int.o
  .text.DCD_HandleOutEP_ISR
-                0x08003e00      0x178 ..\obj\usb_dcd_int.o
+                0x08003fc8      0x178 ..\obj\usb_dcd_int.o
  .text.DCD_HandleSof_ISR
-                0x08003f78       0x34 ..\obj\usb_dcd_int.o
+                0x08004140       0x34 ..\obj\usb_dcd_int.o
  .text.DCD_HandleRxStatusQueueLevel_ISR
-                0x08003fac      0x104 ..\obj\usb_dcd_int.o
+                0x08004174      0x104 ..\obj\usb_dcd_int.o
  .text.DCD_WriteEmptyTxFifo
-                0x080040b0       0xe4 ..\obj\usb_dcd_int.o
+                0x08004278       0xe4 ..\obj\usb_dcd_int.o
  .text.DCD_HandleUsbReset_ISR
-                0x08004194      0x144 ..\obj\usb_dcd_int.o
+                0x0800435c      0x144 ..\obj\usb_dcd_int.o
  .text.DCD_HandleEnumDone_ISR
-                0x080042d8       0x78 ..\obj\usb_dcd_int.o
+                0x080044a0       0x78 ..\obj\usb_dcd_int.o
  .text.DCD_IsoINIncomplete_ISR
-                0x08004350       0x34 ..\obj\usb_dcd_int.o
+                0x08004518       0x34 ..\obj\usb_dcd_int.o
  .text.DCD_IsoOUTIncomplete_ISR
-                0x08004384       0x34 ..\obj\usb_dcd_int.o
+                0x0800454c       0x34 ..\obj\usb_dcd_int.o
  .text.DCD_ReadDevInEP
-                0x080043b8       0x50 ..\obj\usb_dcd_int.o
+                0x08004580       0x50 ..\obj\usb_dcd_int.o
  .text.usbd_cdc_Init
-                0x08004408       0x88 ..\obj\usbd_cdc_core.o
+                0x080045d0       0x88 ..\obj\usbd_cdc_core.o
  .text.usbd_cdc_DeInit
-                0x08004490       0x38 ..\obj\usbd_cdc_core.o
+                0x08004658       0x38 ..\obj\usbd_cdc_core.o
  .text.usbd_cdc_Setup
-                0x080044c8      0x120 ..\obj\usbd_cdc_core.o
+                0x08004690      0x120 ..\obj\usbd_cdc_core.o
  .text.usbd_cdc_EP0_RxReady
-                0x080045e8       0x44 ..\obj\usbd_cdc_core.o
+                0x080047b0       0x44 ..\obj\usbd_cdc_core.o
  .text.usbd_cdc_DataIn
-                0x0800462c       0xc0 ..\obj\usbd_cdc_core.o
+                0x080047f4       0xc0 ..\obj\usbd_cdc_core.o
  .text.usbd_cdc_DataOut
-                0x080046ec       0x54 ..\obj\usbd_cdc_core.o
+                0x080048b4       0x54 ..\obj\usbd_cdc_core.o
  .text.usbd_cdc_SOF
-                0x08004740       0x30 ..\obj\usbd_cdc_core.o
+                0x08004908       0x30 ..\obj\usbd_cdc_core.o
  .text.Handle_USBAsynchXfer
-                0x08004770      0x100 ..\obj\usbd_cdc_core.o
+                0x08004938      0x100 ..\obj\usbd_cdc_core.o
  .text.USBD_cdc_GetCfgDesc
-                0x08004870       0x24 ..\obj\usbd_cdc_core.o
+                0x08004a38       0x24 ..\obj\usbd_cdc_core.o
  .text.SPI_I2S_DeInit
-                0x08004894       0x74 ..\obj\stm32f4xx_spi.o
-                0x08004894                SPI_I2S_DeInit
+                0x08004a5c       0x74 ..\obj\stm32f4xx_spi.o
+                0x08004a5c                SPI_I2S_DeInit
  .text.SPI_Init
-                0x08004908       0x88 ..\obj\stm32f4xx_spi.o
-                0x08004908                SPI_Init
- .text.SPI_Cmd  0x08004990       0x40 ..\obj\stm32f4xx_spi.o
-                0x08004990                SPI_Cmd
+                0x08004ad0       0x88 ..\obj\stm32f4xx_spi.o
+                0x08004ad0                SPI_Init
+ .text.SPI_Cmd  0x08004b58       0x40 ..\obj\stm32f4xx_spi.o
+                0x08004b58                SPI_Cmd
  .text.SPI_I2S_ReceiveData
-                0x080049d0       0x1c ..\obj\stm32f4xx_spi.o
-                0x080049d0                SPI_I2S_ReceiveData
+                0x08004b98       0x1c ..\obj\stm32f4xx_spi.o
+                0x08004b98                SPI_I2S_ReceiveData
  .text.SPI_I2S_SendData
-                0x080049ec       0x1c ..\obj\stm32f4xx_spi.o
-                0x080049ec                SPI_I2S_SendData
+                0x08004bb4       0x1c ..\obj\stm32f4xx_spi.o
+                0x08004bb4                SPI_I2S_SendData
  .text.SPI_I2S_GetFlagStatus
-                0x08004a08       0x38 ..\obj\stm32f4xx_spi.o
-                0x08004a08                SPI_I2S_GetFlagStatus
+                0x08004bd0       0x38 ..\obj\stm32f4xx_spi.o
+                0x08004bd0                SPI_I2S_GetFlagStatus
  .text.I2C_Init
-                0x08004a40      0x184 ..\obj\stm32f4xx_i2c.o
-                0x08004a40                I2C_Init
- .text.I2C_Cmd  0x08004bc4       0x40 ..\obj\stm32f4xx_i2c.o
-                0x08004bc4                I2C_Cmd
+                0x08004c08      0x184 ..\obj\stm32f4xx_i2c.o
+                0x08004c08                I2C_Init
+ .text.I2C_Cmd  0x08004d8c       0x40 ..\obj\stm32f4xx_i2c.o
+                0x08004d8c                I2C_Cmd
  .text.I2C_GenerateSTART
-                0x08004c04       0x40 ..\obj\stm32f4xx_i2c.o
-                0x08004c04                I2C_GenerateSTART
+                0x08004dcc       0x40 ..\obj\stm32f4xx_i2c.o
+                0x08004dcc                I2C_GenerateSTART
  .text.I2C_GenerateSTOP
-                0x08004c44       0x40 ..\obj\stm32f4xx_i2c.o
-                0x08004c44                I2C_GenerateSTOP
+                0x08004e0c       0x40 ..\obj\stm32f4xx_i2c.o
+                0x08004e0c                I2C_GenerateSTOP
  .text.I2C_Send7bitAddress
-                0x08004c84       0x3c ..\obj\stm32f4xx_i2c.o
-                0x08004c84                I2C_Send7bitAddress
+                0x08004e4c       0x3c ..\obj\stm32f4xx_i2c.o
+                0x08004e4c                I2C_Send7bitAddress
  .text.I2C_AcknowledgeConfig
-                0x08004cc0       0x40 ..\obj\stm32f4xx_i2c.o
-                0x08004cc0                I2C_AcknowledgeConfig
+                0x08004e88       0x40 ..\obj\stm32f4xx_i2c.o
+                0x08004e88                I2C_AcknowledgeConfig
  .text.I2C_SendData
-                0x08004d00       0x20 ..\obj\stm32f4xx_i2c.o
-                0x08004d00                I2C_SendData
+                0x08004ec8       0x20 ..\obj\stm32f4xx_i2c.o
+                0x08004ec8                I2C_SendData
  .text.I2C_ReceiveData
-                0x08004d20       0x1c ..\obj\stm32f4xx_i2c.o
-                0x08004d20                I2C_ReceiveData
+                0x08004ee8       0x1c ..\obj\stm32f4xx_i2c.o
+                0x08004ee8                I2C_ReceiveData
  .text.I2C_CheckEvent
-                0x08004d3c       0x60 ..\obj\stm32f4xx_i2c.o
-                0x08004d3c                I2C_CheckEvent
+                0x08004f04       0x60 ..\obj\stm32f4xx_i2c.o
+                0x08004f04                I2C_CheckEvent
  .text.I2C_GetFlagStatus
-                0x08004d9c       0x68 ..\obj\stm32f4xx_i2c.o
-                0x08004d9c                I2C_GetFlagStatus
+                0x08004f64       0x68 ..\obj\stm32f4xx_i2c.o
+                0x08004f64                I2C_GetFlagStatus
  .text.EXTI_ClearITPendingBit
-                0x08004e04       0x1c ..\obj\stm32f4xx_exti.o
-                0x08004e04                EXTI_ClearITPendingBit
+                0x08004fcc       0x1c ..\obj\stm32f4xx_exti.o
+                0x08004fcc                EXTI_ClearITPendingBit
  .text.NVIC_PriorityGroupConfig
-                0x08004e20       0x24 ..\obj\misc.o
-                0x08004e20                NVIC_PriorityGroupConfig
+                0x08004fe8       0x24 ..\obj\misc.o
+                0x08004fe8                NVIC_PriorityGroupConfig
  .text.NVIC_Init
-                0x08004e44       0xbc ..\obj\misc.o
-                0x08004e44                NVIC_Init
+                0x0800500c       0xbc ..\obj\misc.o
+                0x0800500c                NVIC_Init
  .text.DCD_Init
-                0x08004f00      0x100 ..\obj\usb_dcd.o
-                0x08004f00                DCD_Init
+                0x080050c8      0x100 ..\obj\usb_dcd.o
+                0x080050c8                DCD_Init
  .text.DCD_EP_Open
-                0x08005000       0x9c ..\obj\usb_dcd.o
-                0x08005000                DCD_EP_Open
+                0x080051c8       0x9c ..\obj\usb_dcd.o
+                0x080051c8                DCD_EP_Open
  .text.DCD_EP_Close
-                0x0800509c       0x70 ..\obj\usb_dcd.o
-                0x0800509c                DCD_EP_Close
+                0x08005264       0x70 ..\obj\usb_dcd.o
+                0x08005264                DCD_EP_Close
  .text.DCD_EP_PrepareRx
-                0x0800510c       0x80 ..\obj\usb_dcd.o
-                0x0800510c                DCD_EP_PrepareRx
+                0x080052d4       0x80 ..\obj\usb_dcd.o
+                0x080052d4                DCD_EP_PrepareRx
  .text.DCD_EP_Tx
-                0x0800518c       0x78 ..\obj\usb_dcd.o
-                0x0800518c                DCD_EP_Tx
+                0x08005354       0x78 ..\obj\usb_dcd.o
+                0x08005354                DCD_EP_Tx
  .text.DCD_EP_Stall
-                0x08005204       0x74 ..\obj\usb_dcd.o
-                0x08005204                DCD_EP_Stall
+                0x080053cc       0x74 ..\obj\usb_dcd.o
+                0x080053cc                DCD_EP_Stall
  .text.DCD_EP_ClrStall
-                0x08005278       0x74 ..\obj\usb_dcd.o
-                0x08005278                DCD_EP_ClrStall
+                0x08005440       0x74 ..\obj\usb_dcd.o
+                0x08005440                DCD_EP_ClrStall
  .text.DCD_EP_SetAddress
-                0x080052ec       0x3c ..\obj\usb_dcd.o
-                0x080052ec                DCD_EP_SetAddress
+                0x080054b4       0x3c ..\obj\usb_dcd.o
+                0x080054b4                DCD_EP_SetAddress
  .text.USBD_CtlSendData
-                0x08005328       0x40 ..\obj\usbd_ioreq.o
-                0x08005328                USBD_CtlSendData
+                0x080054f0       0x40 ..\obj\usbd_ioreq.o
+                0x080054f0                USBD_CtlSendData
  .text.USBD_CtlContinueSendData
-                0x08005368       0x28 ..\obj\usbd_ioreq.o
-                0x08005368                USBD_CtlContinueSendData
+                0x08005530       0x28 ..\obj\usbd_ioreq.o
+                0x08005530                USBD_CtlContinueSendData
  .text.USBD_CtlPrepareRx
-                0x08005390       0x40 ..\obj\usbd_ioreq.o
-                0x08005390                USBD_CtlPrepareRx
+                0x08005558       0x40 ..\obj\usbd_ioreq.o
+                0x08005558                USBD_CtlPrepareRx
  .text.USBD_CtlContinueRx
-                0x080053d0       0x28 ..\obj\usbd_ioreq.o
-                0x080053d0                USBD_CtlContinueRx
+                0x08005598       0x28 ..\obj\usbd_ioreq.o
+                0x08005598                USBD_CtlContinueRx
  .text.USBD_CtlSendStatus
-                0x080053f8       0x30 ..\obj\usbd_ioreq.o
-                0x080053f8                USBD_CtlSendStatus
+                0x080055c0       0x30 ..\obj\usbd_ioreq.o
+                0x080055c0                USBD_CtlSendStatus
  .text.USBD_CtlReceiveStatus
-                0x08005428       0x30 ..\obj\usbd_ioreq.o
-                0x08005428                USBD_CtlReceiveStatus
+                0x080055f0       0x30 ..\obj\usbd_ioreq.o
+                0x080055f0                USBD_CtlReceiveStatus
+ .text          0x08005620      0x370 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_addsubdf3.o)
+                0x08005620                __aeabi_drsub
+                0x08005628                __aeabi_dsub
+                0x08005628                __subdf3
+                0x0800562c                __aeabi_dadd
+                0x0800562c                __adddf3
+                0x080058a4                __floatunsidf
+                0x080058a4                __aeabi_ui2d
+                0x080058c4                __floatsidf
+                0x080058c4                __aeabi_i2d
+                0x080058e8                __aeabi_f2d
+                0x080058e8                __extendsfdf2
+                0x08005924                __floatundidf
+                0x08005924                __aeabi_ul2d
+                0x08005934                __floatdidf
+                0x08005934                __aeabi_l2d
+ .text          0x08005990      0x424 c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_muldivdf3.o)
+                0x08005990                __aeabi_dmul
+                0x08005990                __muldf3
+                0x08005be4                __divdf3
+                0x08005be4                __aeabi_ddiv
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -1237,38 +1270,38 @@ Linker script and memory map
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x08005458       0x98 ..\obj\usbd_desc.o
+ .rodata        0x08005db4       0x98 ..\obj\usbd_desc.o
  *(.eh_fram e*)
 
-.glue_7         0x080054f0        0x0
+.glue_7         0x08005e4c        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x080054f0        0x0
+.glue_7t        0x08005e4c        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x080054f0        0x0
+.vfp11_veneer   0x08005e4c        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x080054f0        0x0
+.v4_bx          0x08005e4c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x080054f0        0x0
+.iplt           0x08005e4c        0x0
  .iplt          0x00000000        0x0 ..\obj\accelerometers.o
 
-.rel.dyn        0x080054f0        0x0
+.rel.dyn        0x08005e4c        0x0
  .rel.iplt      0x00000000        0x0 ..\obj\accelerometers.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080054f0                __exidx_start = .
+                0x08005e4c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x080054f0                __exidx_end = .
-                0x080054f0                __etext = .
-                0x080054f0                _sidata = __etext
+                0x08005e4c                __exidx_end = .
+                0x08005e4c                __etext = .
+                0x08005e4c                _sidata = __etext
 
-.data           0x20000000      0x144 load address 0x080054f0
+.data           0x20000000      0x144 load address 0x08005e4c
                 0x20000000                __data_start__ = .
                 0x20000000                _sdata = __data_start__
  *(vtable)
@@ -1314,10 +1347,10 @@ Linker script and memory map
                 0x20000144                __data_end__ = .
                 0x20000144                _edata = __data_end__
 
-.igot.plt       0x20000144        0x0 load address 0x08005634
+.igot.plt       0x20000144        0x0 load address 0x08005f90
  .igot.plt      0x00000000        0x0 ..\obj\accelerometers.o
 
-.bss            0x20000144      0xf84 load address 0x08005634
+.bss            0x20000144      0xf7c load address 0x08005f90
                 0x20000144                . = ALIGN (0x4)
                 0x20000144                __bss_start__ = .
                 0x20000144                _sbss = __bss_start__
@@ -1332,42 +1365,39 @@ Linker script and memory map
                 0x20000160                APP_Rx_length
                 0x20000164                USB_Tx_State
  *(COMMON)
- COMMON         0x20000170      0x600 ..\obj\main.o
+ COMMON         0x20000170      0x5f8 ..\obj\main.o
                 0x20000170                ticker
-                0x20000174                x
-                0x20000175                z
-                0x20000178                downTicker
-                0x2000017c                y
-                0x20000180                USB_OTG_dev
- COMMON         0x20000770       0x98 ..\obj\usbd_cdc_vcp.o
-                0x20000770                APP_Tx_Buffer
-                0x200007f0                APP_tx_ptr_tail
-                0x200007f4                USART_InitStructure
-                0x20000804                APP_tx_ptr_head
- COMMON         0x20000808       0x32 ..\obj\usbd_req.o
-                0x20000808                USBD_StrDesc
- *fill*         0x2000083a        0x2 
- COMMON         0x2000083c      0x88c ..\obj\usbd_cdc_core.o
-                0x2000083c                usbd_cdc_OtherCfgDesc
-                0x20000880                USB_Rx_Buffer
-                0x200008c0                CmdBuff
-                0x200008c8                APP_Rx_Buffer
-                0x200010c8                . = ALIGN (0x4)
-                0x200010c8                __bss_end__ = .
-                0x200010c8                _ebss = __bss_end__
+                0x20000174                downTicker
+                0x20000178                USB_OTG_dev
+ COMMON         0x20000768       0x98 ..\obj\usbd_cdc_vcp.o
+                0x20000768                APP_Tx_Buffer
+                0x200007e8                APP_tx_ptr_tail
+                0x200007ec                USART_InitStructure
+                0x200007fc                APP_tx_ptr_head
+ COMMON         0x20000800       0x32 ..\obj\usbd_req.o
+                0x20000800                USBD_StrDesc
+ *fill*         0x20000832        0x2 
+ COMMON         0x20000834      0x88c ..\obj\usbd_cdc_core.o
+                0x20000834                usbd_cdc_OtherCfgDesc
+                0x20000878                USB_Rx_Buffer
+                0x200008b8                CmdBuff
+                0x200008c0                APP_Rx_Buffer
+                0x200010c0                . = ALIGN (0x4)
+                0x200010c0                __bss_end__ = .
+                0x200010c0                _ebss = __bss_end__
 
-.heap           0x200010c8        0x0
-                0x200010c8                __end__ = .
-                0x200010c8                _end = __end__
-                0x200010c8                end = __end__
+.heap           0x200010c0        0x0
+                0x200010c0                __end__ = .
+                0x200010c0                _end = __end__
+                0x200010c0                end = __end__
  *(.heap*)
-                0x200010c8                __HeapLimit = .
+                0x200010c0                __HeapLimit = .
 
-.co_stack       0x200010c8      0x800 load address 0x080065b8
-                0x200010c8                . = ALIGN (0x8)
+.co_stack       0x200010c0      0x800 load address 0x08006f0c
+                0x200010c0                . = ALIGN (0x8)
  *(.co_stack .co_stack.*)
- .co_stack      0x200010c8      0x800 ..\obj\startup_stm32f4xx.o
-                0x200010c8                pulStack
+ .co_stack      0x200010c0      0x800 ..\obj\startup_stm32f4xx.o
+                0x200010c0                pulStack
                 0x20020000                __StackTop = (ORIGIN (ram) + 0x20000)
                 0x2001f800                __StackLimit = (__StackTop - SIZEOF (.co_stack))
                 0x20020000                PROVIDE (__stack, __StackTop)
@@ -1403,184 +1433,184 @@ LOAD c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm
 END GROUP
 OUTPUT(STM32F4_AccelerometersProject_Test.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xfc2f
- .debug_info    0x00000000      0x9bb ..\obj\accelerometers.o
- .debug_info    0x000009bb     0x251b ..\obj\usb_core.o
- .debug_info    0x00002ed6      0x1cb ..\obj\usbd_usr.o
- .debug_info    0x000030a1       0xed ..\obj\startup_stm32f4xx.o
- .debug_info    0x0000318e      0xe95 ..\obj\usbd_core.o
- .debug_info    0x00004023     0x14c7 ..\obj\main.o
- .debug_info    0x000054ea      0xc4d ..\obj\stm32f4xx_rcc.o
- .debug_info    0x00006137      0x363 ..\obj\usbd_desc.o
- .debug_info    0x0000649a      0x602 ..\obj\stm32f4xx_gpio.o
- .debug_info    0x00006a9c      0x4ae ..\obj\usbd_cdc_vcp.o
- .debug_info    0x00006f4a      0x592 ..\obj\system_stm32f4xx.o
- .debug_info    0x000074dc     0x1004 ..\obj\usb_bsp.o
- .debug_info    0x000084e0      0xf9b ..\obj\usbd_req.o
- .debug_info    0x0000947b     0x1d6d ..\obj\usb_dcd_int.o
- .debug_info    0x0000b1e8      0xef2 ..\obj\usbd_cdc_core.o
- .debug_info    0x0000c0da      0xb07 ..\obj\stm32f4xx_spi.o
- .debug_info    0x0000cbe1      0xaf4 ..\obj\stm32f4xx_i2c.o
- .debug_info    0x0000d6d5      0x347 ..\obj\stm32f4xx_exti.o
- .debug_info    0x0000da1c      0x53d ..\obj\misc.o
- .debug_info    0x0000df59     0x101f ..\obj\usb_dcd.o
- .debug_info    0x0000ef78      0xcb7 ..\obj\usbd_ioreq.o
+.debug_info     0x00000000     0xfd0c
+ .debug_info    0x00000000      0xa7b ..\obj\accelerometers.o
+ .debug_info    0x00000a7b     0x251b ..\obj\usb_core.o
+ .debug_info    0x00002f96      0x1cb ..\obj\usbd_usr.o
+ .debug_info    0x00003161       0xed ..\obj\startup_stm32f4xx.o
+ .debug_info    0x0000324e      0xe95 ..\obj\usbd_core.o
+ .debug_info    0x000040e3     0x148d ..\obj\main.o
+ .debug_info    0x00005570      0xc4d ..\obj\stm32f4xx_rcc.o
+ .debug_info    0x000061bd      0x363 ..\obj\usbd_desc.o
+ .debug_info    0x00006520      0x602 ..\obj\stm32f4xx_gpio.o
+ .debug_info    0x00006b22      0x505 ..\obj\usbd_cdc_vcp.o
+ .debug_info    0x00007027      0x592 ..\obj\system_stm32f4xx.o
+ .debug_info    0x000075b9     0x1004 ..\obj\usb_bsp.o
+ .debug_info    0x000085bd      0xf9b ..\obj\usbd_req.o
+ .debug_info    0x00009558     0x1d6d ..\obj\usb_dcd_int.o
+ .debug_info    0x0000b2c5      0xef2 ..\obj\usbd_cdc_core.o
+ .debug_info    0x0000c1b7      0xb07 ..\obj\stm32f4xx_spi.o
+ .debug_info    0x0000ccbe      0xaf4 ..\obj\stm32f4xx_i2c.o
+ .debug_info    0x0000d7b2      0x347 ..\obj\stm32f4xx_exti.o
+ .debug_info    0x0000daf9      0x53d ..\obj\misc.o
+ .debug_info    0x0000e036     0x101f ..\obj\usb_dcd.o
+ .debug_info    0x0000f055      0xcb7 ..\obj\usbd_ioreq.o
 
-.debug_abbrev   0x00000000     0x25eb
- .debug_abbrev  0x00000000      0x234 ..\obj\accelerometers.o
- .debug_abbrev  0x00000234      0x2e7 ..\obj\usb_core.o
- .debug_abbrev  0x0000051b       0xdd ..\obj\usbd_usr.o
- .debug_abbrev  0x000005f8       0xb0 ..\obj\startup_stm32f4xx.o
- .debug_abbrev  0x000006a8      0x21d ..\obj\usbd_core.o
- .debug_abbrev  0x000008c5      0x2ca ..\obj\main.o
- .debug_abbrev  0x00000b8f      0x1e3 ..\obj\stm32f4xx_rcc.o
- .debug_abbrev  0x00000d72      0x12c ..\obj\usbd_desc.o
- .debug_abbrev  0x00000e9e      0x1a3 ..\obj\stm32f4xx_gpio.o
- .debug_abbrev  0x00001041      0x189 ..\obj\usbd_cdc_vcp.o
- .debug_abbrev  0x000011ca      0x136 ..\obj\system_stm32f4xx.o
- .debug_abbrev  0x00001300      0x22b ..\obj\usb_bsp.o
- .debug_abbrev  0x0000152b      0x293 ..\obj\usbd_req.o
- .debug_abbrev  0x000017be      0x25b ..\obj\usb_dcd_int.o
- .debug_abbrev  0x00001a19      0x215 ..\obj\usbd_cdc_core.o
- .debug_abbrev  0x00001c2e      0x167 ..\obj\stm32f4xx_spi.o
- .debug_abbrev  0x00001d95      0x164 ..\obj\stm32f4xx_i2c.o
- .debug_abbrev  0x00001ef9      0x1a5 ..\obj\stm32f4xx_exti.o
- .debug_abbrev  0x0000209e      0x145 ..\obj\misc.o
- .debug_abbrev  0x000021e3      0x259 ..\obj\usb_dcd.o
- .debug_abbrev  0x0000243c      0x1af ..\obj\usbd_ioreq.o
+.debug_abbrev   0x00000000     0x25e9
+ .debug_abbrev  0x00000000      0x241 ..\obj\accelerometers.o
+ .debug_abbrev  0x00000241      0x2e7 ..\obj\usb_core.o
+ .debug_abbrev  0x00000528       0xdd ..\obj\usbd_usr.o
+ .debug_abbrev  0x00000605       0xb0 ..\obj\startup_stm32f4xx.o
+ .debug_abbrev  0x000006b5      0x21d ..\obj\usbd_core.o
+ .debug_abbrev  0x000008d2      0x2ac ..\obj\main.o
+ .debug_abbrev  0x00000b7e      0x1e3 ..\obj\stm32f4xx_rcc.o
+ .debug_abbrev  0x00000d61      0x12c ..\obj\usbd_desc.o
+ .debug_abbrev  0x00000e8d      0x1a3 ..\obj\stm32f4xx_gpio.o
+ .debug_abbrev  0x00001030      0x198 ..\obj\usbd_cdc_vcp.o
+ .debug_abbrev  0x000011c8      0x136 ..\obj\system_stm32f4xx.o
+ .debug_abbrev  0x000012fe      0x22b ..\obj\usb_bsp.o
+ .debug_abbrev  0x00001529      0x293 ..\obj\usbd_req.o
+ .debug_abbrev  0x000017bc      0x25b ..\obj\usb_dcd_int.o
+ .debug_abbrev  0x00001a17      0x215 ..\obj\usbd_cdc_core.o
+ .debug_abbrev  0x00001c2c      0x167 ..\obj\stm32f4xx_spi.o
+ .debug_abbrev  0x00001d93      0x164 ..\obj\stm32f4xx_i2c.o
+ .debug_abbrev  0x00001ef7      0x1a5 ..\obj\stm32f4xx_exti.o
+ .debug_abbrev  0x0000209c      0x145 ..\obj\misc.o
+ .debug_abbrev  0x000021e1      0x259 ..\obj\usb_dcd.o
+ .debug_abbrev  0x0000243a      0x1af ..\obj\usbd_ioreq.o
 
-.debug_aranges  0x00000000      0xb60
+.debug_aranges  0x00000000      0xb70
  .debug_aranges
-                0x00000000       0x90 ..\obj\accelerometers.o
+                0x00000000       0x98 ..\obj\accelerometers.o
  .debug_aranges
-                0x00000090      0x138 ..\obj\usb_core.o
+                0x00000098      0x138 ..\obj\usb_core.o
  .debug_aranges
-                0x000001c8       0x50 ..\obj\usbd_usr.o
+                0x000001d0       0x50 ..\obj\usbd_usr.o
  .debug_aranges
-                0x00000218       0x28 ..\obj\startup_stm32f4xx.o
+                0x00000220       0x28 ..\obj\startup_stm32f4xx.o
  .debug_aranges
-                0x00000240       0x80 ..\obj\usbd_core.o
+                0x00000248       0x80 ..\obj\usbd_core.o
  .debug_aranges
-                0x000002c0       0x98 ..\obj\main.o
+                0x000002c8       0x98 ..\obj\main.o
  .debug_aranges
-                0x00000358      0x178 ..\obj\stm32f4xx_rcc.o
+                0x00000360      0x178 ..\obj\stm32f4xx_rcc.o
  .debug_aranges
-                0x000004d0       0x50 ..\obj\usbd_desc.o
+                0x000004d8       0x50 ..\obj\usbd_desc.o
  .debug_aranges
-                0x00000520       0x88 ..\obj\stm32f4xx_gpio.o
+                0x00000528       0x88 ..\obj\stm32f4xx_gpio.o
  .debug_aranges
-                0x000005a8       0x70 ..\obj\usbd_cdc_vcp.o
+                0x000005b0       0x78 ..\obj\usbd_cdc_vcp.o
  .debug_aranges
-                0x00000618       0x30 ..\obj\system_stm32f4xx.o
+                0x00000628       0x30 ..\obj\system_stm32f4xx.o
  .debug_aranges
-                0x00000648       0x48 ..\obj\usb_bsp.o
+                0x00000658       0x48 ..\obj\usb_bsp.o
  .debug_aranges
-                0x00000690       0x88 ..\obj\usbd_req.o
+                0x000006a0       0x88 ..\obj\usbd_req.o
  .debug_aranges
-                0x00000718       0x80 ..\obj\usb_dcd_int.o
+                0x00000728       0x80 ..\obj\usb_dcd_int.o
  .debug_aranges
-                0x00000798       0x60 ..\obj\usbd_cdc_core.o
+                0x000007a8       0x60 ..\obj\usbd_cdc_core.o
  .debug_aranges
-                0x000007f8       0xe0 ..\obj\stm32f4xx_spi.o
+                0x00000808       0xe0 ..\obj\stm32f4xx_spi.o
  .debug_aranges
-                0x000008d8      0x120 ..\obj\stm32f4xx_i2c.o
+                0x000008e8      0x120 ..\obj\stm32f4xx_i2c.o
  .debug_aranges
-                0x000009f8       0x58 ..\obj\stm32f4xx_exti.o
+                0x00000a08       0x58 ..\obj\stm32f4xx_exti.o
  .debug_aranges
-                0x00000a50       0x40 ..\obj\misc.o
+                0x00000a60       0x40 ..\obj\misc.o
  .debug_aranges
-                0x00000a90       0x80 ..\obj\usb_dcd.o
+                0x00000aa0       0x80 ..\obj\usb_dcd.o
  .debug_aranges
-                0x00000b10       0x50 ..\obj\usbd_ioreq.o
+                0x00000b20       0x50 ..\obj\usbd_ioreq.o
 
-.debug_ranges   0x00000000      0xa10
- .debug_ranges  0x00000000       0x80 ..\obj\accelerometers.o
- .debug_ranges  0x00000080      0x128 ..\obj\usb_core.o
- .debug_ranges  0x000001a8       0x40 ..\obj\usbd_usr.o
- .debug_ranges  0x000001e8       0x18 ..\obj\startup_stm32f4xx.o
- .debug_ranges  0x00000200       0x70 ..\obj\usbd_core.o
- .debug_ranges  0x00000270       0x88 ..\obj\main.o
- .debug_ranges  0x000002f8      0x168 ..\obj\stm32f4xx_rcc.o
- .debug_ranges  0x00000460       0x40 ..\obj\usbd_desc.o
- .debug_ranges  0x000004a0       0x78 ..\obj\stm32f4xx_gpio.o
- .debug_ranges  0x00000518       0x60 ..\obj\usbd_cdc_vcp.o
- .debug_ranges  0x00000578       0x20 ..\obj\system_stm32f4xx.o
- .debug_ranges  0x00000598       0x38 ..\obj\usb_bsp.o
- .debug_ranges  0x000005d0       0x78 ..\obj\usbd_req.o
- .debug_ranges  0x00000648       0x70 ..\obj\usb_dcd_int.o
- .debug_ranges  0x000006b8       0x50 ..\obj\usbd_cdc_core.o
- .debug_ranges  0x00000708       0xd0 ..\obj\stm32f4xx_spi.o
- .debug_ranges  0x000007d8      0x110 ..\obj\stm32f4xx_i2c.o
- .debug_ranges  0x000008e8       0x48 ..\obj\stm32f4xx_exti.o
- .debug_ranges  0x00000930       0x30 ..\obj\misc.o
- .debug_ranges  0x00000960       0x70 ..\obj\usb_dcd.o
- .debug_ranges  0x000009d0       0x40 ..\obj\usbd_ioreq.o
+.debug_ranges   0x00000000      0xa20
+ .debug_ranges  0x00000000       0x88 ..\obj\accelerometers.o
+ .debug_ranges  0x00000088      0x128 ..\obj\usb_core.o
+ .debug_ranges  0x000001b0       0x40 ..\obj\usbd_usr.o
+ .debug_ranges  0x000001f0       0x18 ..\obj\startup_stm32f4xx.o
+ .debug_ranges  0x00000208       0x70 ..\obj\usbd_core.o
+ .debug_ranges  0x00000278       0x88 ..\obj\main.o
+ .debug_ranges  0x00000300      0x168 ..\obj\stm32f4xx_rcc.o
+ .debug_ranges  0x00000468       0x40 ..\obj\usbd_desc.o
+ .debug_ranges  0x000004a8       0x78 ..\obj\stm32f4xx_gpio.o
+ .debug_ranges  0x00000520       0x68 ..\obj\usbd_cdc_vcp.o
+ .debug_ranges  0x00000588       0x20 ..\obj\system_stm32f4xx.o
+ .debug_ranges  0x000005a8       0x38 ..\obj\usb_bsp.o
+ .debug_ranges  0x000005e0       0x78 ..\obj\usbd_req.o
+ .debug_ranges  0x00000658       0x70 ..\obj\usb_dcd_int.o
+ .debug_ranges  0x000006c8       0x50 ..\obj\usbd_cdc_core.o
+ .debug_ranges  0x00000718       0xd0 ..\obj\stm32f4xx_spi.o
+ .debug_ranges  0x000007e8      0x110 ..\obj\stm32f4xx_i2c.o
+ .debug_ranges  0x000008f8       0x48 ..\obj\stm32f4xx_exti.o
+ .debug_ranges  0x00000940       0x30 ..\obj\misc.o
+ .debug_ranges  0x00000970       0x70 ..\obj\usb_dcd.o
+ .debug_ranges  0x000009e0       0x40 ..\obj\usbd_ioreq.o
 
-.debug_line     0x00000000     0x4fc6
- .debug_line    0x00000000      0x4d3 ..\obj\accelerometers.o
- .debug_line    0x000004d3      0x703 ..\obj\usb_core.o
- .debug_line    0x00000bd6      0x26a ..\obj\usbd_usr.o
- .debug_line    0x00000e40       0xbc ..\obj\startup_stm32f4xx.o
- .debug_line    0x00000efc      0x394 ..\obj\usbd_core.o
- .debug_line    0x00001290      0x5f0 ..\obj\main.o
- .debug_line    0x00001880      0x615 ..\obj\stm32f4xx_rcc.o
- .debug_line    0x00001e95      0x28e ..\obj\usbd_desc.o
- .debug_line    0x00002123      0x3ba ..\obj\stm32f4xx_gpio.o
- .debug_line    0x000024dd      0x3af ..\obj\usbd_cdc_vcp.o
- .debug_line    0x0000288c      0x22c ..\obj\system_stm32f4xx.o
- .debug_line    0x00002ab8      0x35b ..\obj\usb_bsp.o
- .debug_line    0x00002e13      0x444 ..\obj\usbd_req.o
- .debug_line    0x00003257      0x3e6 ..\obj\usb_dcd_int.o
- .debug_line    0x0000363d      0x370 ..\obj\usbd_cdc_core.o
- .debug_line    0x000039ad      0x4cd ..\obj\stm32f4xx_spi.o
- .debug_line    0x00003e7a      0x556 ..\obj\stm32f4xx_i2c.o
- .debug_line    0x000043d0      0x320 ..\obj\stm32f4xx_exti.o
- .debug_line    0x000046f0      0x2c0 ..\obj\misc.o
- .debug_line    0x000049b0      0x36e ..\obj\usb_dcd.o
- .debug_line    0x00004d1e      0x2a8 ..\obj\usbd_ioreq.o
+.debug_line     0x00000000     0x4ff8
+ .debug_line    0x00000000      0x4f0 ..\obj\accelerometers.o
+ .debug_line    0x000004f0      0x703 ..\obj\usb_core.o
+ .debug_line    0x00000bf3      0x26a ..\obj\usbd_usr.o
+ .debug_line    0x00000e5d       0xbc ..\obj\startup_stm32f4xx.o
+ .debug_line    0x00000f19      0x394 ..\obj\usbd_core.o
+ .debug_line    0x000012ad      0x5f1 ..\obj\main.o
+ .debug_line    0x0000189e      0x615 ..\obj\stm32f4xx_rcc.o
+ .debug_line    0x00001eb3      0x28e ..\obj\usbd_desc.o
+ .debug_line    0x00002141      0x3ba ..\obj\stm32f4xx_gpio.o
+ .debug_line    0x000024fb      0x3c3 ..\obj\usbd_cdc_vcp.o
+ .debug_line    0x000028be      0x22c ..\obj\system_stm32f4xx.o
+ .debug_line    0x00002aea      0x35b ..\obj\usb_bsp.o
+ .debug_line    0x00002e45      0x444 ..\obj\usbd_req.o
+ .debug_line    0x00003289      0x3e6 ..\obj\usb_dcd_int.o
+ .debug_line    0x0000366f      0x370 ..\obj\usbd_cdc_core.o
+ .debug_line    0x000039df      0x4cd ..\obj\stm32f4xx_spi.o
+ .debug_line    0x00003eac      0x556 ..\obj\stm32f4xx_i2c.o
+ .debug_line    0x00004402      0x320 ..\obj\stm32f4xx_exti.o
+ .debug_line    0x00004722      0x2c0 ..\obj\misc.o
+ .debug_line    0x000049e2      0x36e ..\obj\usb_dcd.o
+ .debug_line    0x00004d50      0x2a8 ..\obj\usbd_ioreq.o
 
-.debug_str      0x00000000     0x433c
- .debug_str     0x00000000      0x6bd ..\obj\accelerometers.o
-                                0x745 (size before relaxing)
- .debug_str     0x000006bd     0x1234 ..\obj\usb_core.o
+.debug_str      0x00000000     0x438d
+ .debug_str     0x00000000      0x6fe ..\obj\accelerometers.o
+                                0x78e (size before relaxing)
+ .debug_str     0x000006fe     0x1234 ..\obj\usb_core.o
                                0x16a6 (size before relaxing)
- .debug_str     0x000018f1      0x100 ..\obj\usbd_usr.o
+ .debug_str     0x00001932      0x100 ..\obj\usbd_usr.o
                                 0x2c6 (size before relaxing)
- .debug_str     0x000019f1       0xcb ..\obj\startup_stm32f4xx.o
+ .debug_str     0x00001a32       0xcb ..\obj\startup_stm32f4xx.o
                                 0x162 (size before relaxing)
- .debug_str     0x00001abc      0x1a9 ..\obj\usbd_core.o
+ .debug_str     0x00001afd      0x1a9 ..\obj\usbd_core.o
                                 0xaec (size before relaxing)
- .debug_str     0x00001c65      0x741 ..\obj\main.o
-                               0x12d3 (size before relaxing)
- .debug_str     0x000023a6      0x67a ..\obj\stm32f4xx_rcc.o
+ .debug_str     0x00001ca6      0x741 ..\obj\main.o
+                               0x12d1 (size before relaxing)
+ .debug_str     0x000023e7      0x67a ..\obj\stm32f4xx_rcc.o
                                 0x86b (size before relaxing)
- .debug_str     0x00002a20      0x170 ..\obj\usbd_desc.o
+ .debug_str     0x00002a61      0x170 ..\obj\usbd_desc.o
                                 0x39f (size before relaxing)
- .debug_str     0x00002b90      0x1a9 ..\obj\stm32f4xx_gpio.o
+ .debug_str     0x00002bd1      0x1a9 ..\obj\stm32f4xx_gpio.o
                                 0x4be (size before relaxing)
- .debug_str     0x00002d39      0x253 ..\obj\usbd_cdc_vcp.o
-                                0x3d1 (size before relaxing)
- .debug_str     0x00002f8c       0xcf ..\obj\system_stm32f4xx.o
+ .debug_str     0x00002d7a      0x263 ..\obj\usbd_cdc_vcp.o
+                                0x3f3 (size before relaxing)
+ .debug_str     0x00002fdd       0xcf ..\obj\system_stm32f4xx.o
                                 0x3c5 (size before relaxing)
- .debug_str     0x0000305b      0x16a ..\obj\usb_bsp.o
+ .debug_str     0x000030ac      0x16a ..\obj\usb_bsp.o
                                0x10ed (size before relaxing)
- .debug_str     0x000031c5      0x18f ..\obj\usbd_req.o
+ .debug_str     0x00003216      0x18f ..\obj\usbd_req.o
                                 0xb17 (size before relaxing)
- .debug_str     0x00003354      0x2a4 ..\obj\usb_dcd_int.o
+ .debug_str     0x000033a5      0x2a4 ..\obj\usb_dcd_int.o
                                0x12a4 (size before relaxing)
- .debug_str     0x000035f8      0x1ac ..\obj\usbd_cdc_core.o
+ .debug_str     0x00003649      0x1ac ..\obj\usbd_cdc_core.o
                                 0xb34 (size before relaxing)
- .debug_str     0x000037a4      0x325 ..\obj\stm32f4xx_spi.o
+ .debug_str     0x000037f5      0x325 ..\obj\stm32f4xx_spi.o
                                 0x6a5 (size before relaxing)
- .debug_str     0x00003ac9      0x34e ..\obj\stm32f4xx_i2c.o
+ .debug_str     0x00003b1a      0x34e ..\obj\stm32f4xx_i2c.o
                                 0x680 (size before relaxing)
- .debug_str     0x00003e17      0x1e8 ..\obj\stm32f4xx_exti.o
+ .debug_str     0x00003e68      0x1e8 ..\obj\stm32f4xx_exti.o
                                 0x374 (size before relaxing)
- .debug_str     0x00003fff      0x12e ..\obj\misc.o
+ .debug_str     0x00004050      0x12e ..\obj\misc.o
                                 0x3e9 (size before relaxing)
- .debug_str     0x0000412d      0x12a ..\obj\usb_dcd.o
+ .debug_str     0x0000417e      0x12a ..\obj\usb_dcd.o
                                 0xb46 (size before relaxing)
- .debug_str     0x00004257       0xe5 ..\obj\usbd_ioreq.o
+ .debug_str     0x000042a8       0xe5 ..\obj\usbd_ioreq.o
                                 0x9d6 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -1651,26 +1681,30 @@ OUTPUT(STM32F4_AccelerometersProject_Test.elf elf32-littlearm)
                 0x000003c9       0x33 ..\obj\usb_dcd.o
  .ARM.attributes
                 0x000003fc       0x33 ..\obj\usbd_ioreq.o
+ .ARM.attributes
+                0x0000042f       0x1e c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000044d       0x1e c:/program files (x86)/gnu tools arm embedded/4.8 2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7e-m\libgcc.a(_arm_muldivdf3.o)
 
-.debug_frame    0x00000000     0x239c
- .debug_frame   0x00000000      0x1e4 ..\obj\accelerometers.o
- .debug_frame   0x000001e4      0x434 ..\obj\usb_core.o
- .debug_frame   0x00000618       0xbc ..\obj\usbd_usr.o
- .debug_frame   0x000006d4       0x48 ..\obj\startup_stm32f4xx.o
- .debug_frame   0x0000071c      0x1ac ..\obj\usbd_core.o
- .debug_frame   0x000008c8      0x1c8 ..\obj\main.o
- .debug_frame   0x00000a90      0x4d8 ..\obj\stm32f4xx_rcc.o
- .debug_frame   0x00000f68       0xe8 ..\obj\usbd_desc.o
- .debug_frame   0x00001050      0x19c ..\obj\stm32f4xx_gpio.o
- .debug_frame   0x000011ec      0x144 ..\obj\usbd_cdc_vcp.o
- .debug_frame   0x00001330       0x64 ..\obj\system_stm32f4xx.o
- .debug_frame   0x00001394       0xc4 ..\obj\usb_bsp.o
- .debug_frame   0x00001458      0x1c8 ..\obj\usbd_req.o
- .debug_frame   0x00001620      0x1ac ..\obj\usb_dcd_int.o
- .debug_frame   0x000017cc      0x12c ..\obj\usbd_cdc_core.o
- .debug_frame   0x000018f8      0x2d0 ..\obj\stm32f4xx_spi.o
- .debug_frame   0x00001bc8      0x3b4 ..\obj\stm32f4xx_i2c.o
- .debug_frame   0x00001f7c       0xec ..\obj\stm32f4xx_exti.o
- .debug_frame   0x00002068       0x9c ..\obj\misc.o
- .debug_frame   0x00002104      0x1ac ..\obj\usb_dcd.o
- .debug_frame   0x000022b0       0xec ..\obj\usbd_ioreq.o
+.debug_frame    0x00000000     0x23e8
+ .debug_frame   0x00000000      0x20c ..\obj\accelerometers.o
+ .debug_frame   0x0000020c      0x434 ..\obj\usb_core.o
+ .debug_frame   0x00000640       0xbc ..\obj\usbd_usr.o
+ .debug_frame   0x000006fc       0x48 ..\obj\startup_stm32f4xx.o
+ .debug_frame   0x00000744      0x1ac ..\obj\usbd_core.o
+ .debug_frame   0x000008f0      0x1cc ..\obj\main.o
+ .debug_frame   0x00000abc      0x4d8 ..\obj\stm32f4xx_rcc.o
+ .debug_frame   0x00000f94       0xe8 ..\obj\usbd_desc.o
+ .debug_frame   0x0000107c      0x19c ..\obj\stm32f4xx_gpio.o
+ .debug_frame   0x00001218      0x164 ..\obj\usbd_cdc_vcp.o
+ .debug_frame   0x0000137c       0x64 ..\obj\system_stm32f4xx.o
+ .debug_frame   0x000013e0       0xc4 ..\obj\usb_bsp.o
+ .debug_frame   0x000014a4      0x1c8 ..\obj\usbd_req.o
+ .debug_frame   0x0000166c      0x1ac ..\obj\usb_dcd_int.o
+ .debug_frame   0x00001818      0x12c ..\obj\usbd_cdc_core.o
+ .debug_frame   0x00001944      0x2d0 ..\obj\stm32f4xx_spi.o
+ .debug_frame   0x00001c14      0x3b4 ..\obj\stm32f4xx_i2c.o
+ .debug_frame   0x00001fc8       0xec ..\obj\stm32f4xx_exti.o
+ .debug_frame   0x000020b4       0x9c ..\obj\misc.o
+ .debug_frame   0x00002150      0x1ac ..\obj\usb_dcd.o
+ .debug_frame   0x000022fc       0xec ..\obj\usbd_ioreq.o

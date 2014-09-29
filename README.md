@@ -11,9 +11,12 @@ Funkcja inicjalizująca połączenie. Jako parametry przyjmuje model danego akce
     
     struct Axes Accelerometer_readAxes(struct Connection conn);
 
-Funkcja zwracająca strukturę zawierającą wartości przyspieszenia dla poszczególnych osi.
+Funkcja zwracająca strukturę zawierającą wartości numeryczne pobrane z akcelerometru dla poszczególnych osi.
+
+    struct AxesG Accelerometer_readAxesGForce(struct Connection conn);
+
+Funkcja zwracająca strukturę zawierającą znormalizowane wartości przyspieszenia dla poszczególnych osi.
 
 ### Cele na przyszłość
 
 - Wykrywanie błędów w komunikacji
-- Normalizacja wyników dla wszystkich typów akcelerometrów

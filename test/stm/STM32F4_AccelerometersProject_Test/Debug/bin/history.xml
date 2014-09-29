@@ -1,31 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=STM32F4_AccelerometersProject_Test.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\STM32F4_AccelerometersProject_Test -TC:\CooCox\CoIDE\configuration\ProgramData\STM32F4_AccelerometersProject_Test/arm-gcc-link.ld -g">
-      <target file="STM32F4_AccelerometersProject_Test.elf" lastModified="146a7cd8f77">
-         <source file="..\obj\accelerometers.o" lastModified="146a7cd8d87"/>
-         <source file="..\obj\usb_core.o" lastModified="146a75b9f9b"/>
-         <source file="..\obj\usbd_usr.o" lastModified="146a75b9fd4"/>
-         <source file="..\obj\stm32f4xx_usart.o" lastModified="146a75ba02f"/>
-         <source file="..\obj\startup_stm32f4xx.o" lastModified="146a75ae91a"/>
-         <source file="..\obj\usbd_core.o" lastModified="146a75ba077"/>
-         <source file="..\obj\main.o" lastModified="146a7cae95c"/>
-         <source file="..\obj\stm32f4xx_rcc.o" lastModified="146a75ba206"/>
-         <source file="..\obj\usbd_desc.o" lastModified="146a75ba242"/>
-         <source file="..\obj\stm32f4xx_gpio.o" lastModified="146a75ba284"/>
-         <source file="..\obj\usbd_cdc_vcp.o" lastModified="146a75ba2c3"/>
-         <source file="..\obj\system_stm32f4xx.o" lastModified="146a75ba2f8"/>
-         <source file="..\obj\stm32f4xx_dma.o" lastModified="146a75ba33f"/>
-         <source file="..\obj\usb_bsp.o" lastModified="146a75ba381"/>
-         <source file="..\obj\usbd_req.o" lastModified="146a75ba3d8"/>
-         <source file="..\obj\usb_dcd_int.o" lastModified="146a75ba437"/>
-         <source file="..\obj\usbd_cdc_core.o" lastModified="146a75ba47b"/>
-         <source file="..\obj\stm32f4xx_spi.o" lastModified="146a75ba4ca"/>
-         <source file="..\obj\stm32f4xx_i2c.o" lastModified="146a75ba521"/>
-         <source file="..\obj\stm32f4xx_exti.o" lastModified="146a75ba55b"/>
-         <source file="..\obj\misc.o" lastModified="146a75ba593"/>
-         <source file="..\obj\usb_dcd.o" lastModified="146a75ba5df"/>
-         <source file="..\obj\usbd_ioreq.o" lastModified="146a75ba61d"/>
-         <source file="..\obj\stm32f4xx_tim.o" lastModified="146a75ba6b3"/>
+      <target file="STM32F4_AccelerometersProject_Test.elf" lastModified="148bfd68f9a">
+         <source file="..\obj\accelerometers.o" lastModified="148bfd193e2"/>
+         <source file="..\obj\usb_core.o" lastModified="148bf9349a9"/>
+         <source file="..\obj\usbd_usr.o" lastModified="148bf9349df"/>
+         <source file="..\obj\stm32f4xx_usart.o" lastModified="148bf934a3d"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="148bf934a68"/>
+         <source file="..\obj\usbd_core.o" lastModified="148bf934aab"/>
+         <source file="..\obj\main.o" lastModified="148bfd68dcd"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="148bf934c29"/>
+         <source file="..\obj\usbd_desc.o" lastModified="148bf934c63"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="148bf934ca3"/>
+         <source file="..\obj\usbd_cdc_vcp.o" lastModified="148bfc4f876"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="148bf934d19"/>
+         <source file="..\obj\stm32f4xx_dma.o" lastModified="148bf934d64"/>
+         <source file="..\obj\usb_bsp.o" lastModified="148bf934da6"/>
+         <source file="..\obj\usbd_req.o" lastModified="148bf934dfc"/>
+         <source file="..\obj\usb_dcd_int.o" lastModified="148bf934e5d"/>
+         <source file="..\obj\usbd_cdc_core.o" lastModified="148bf934ea0"/>
+         <source file="..\obj\stm32f4xx_spi.o" lastModified="148bf934eee"/>
+         <source file="..\obj\stm32f4xx_i2c.o" lastModified="148bf934f43"/>
+         <source file="..\obj\stm32f4xx_exti.o" lastModified="148bf934f7c"/>
+         <source file="..\obj\misc.o" lastModified="148bf934fb4"/>
+         <source file="..\obj\usb_dcd.o" lastModified="148bf935001"/>
+         <source file="..\obj\usbd_ioreq.o" lastModified="148bf935040"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="148bf9350d5"/>
       </target>
    </processor>
 </history>
